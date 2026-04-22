@@ -71,13 +71,13 @@ def contact():
 def solvent_list():
     return render_template('products/solvents/solvent.html', active='product')
 
-@app.route('/products/solvents/newmaxa')
-def newmaxa():
-    return render_template('products/solvents/newmaxa.html',  active='product') 
+@app.route('/products/solvents/newmax_a')
+def newmax_a():
+    return render_template('products/solvents/newmax_a.html',  active='product') 
 
-@app.route('/products/solvents/newmaxb')
-def newmaxb():
-    return render_template('products/solvents/newmaxb.html',  active='product')
+@app.route('/products/solvents/newmax_b')
+def newmax_b():
+    return render_template('products/solvents/newmax_b.html',  active='product')
 
 @app.route('/products/solvents/niomax')
 def niomax():
