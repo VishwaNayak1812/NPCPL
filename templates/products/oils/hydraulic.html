@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+{% block title %}Oils | Hydraulic oil {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/hydraulicoil.png') }}"
+                     alt="Hydraulic Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Hydraulic Oil
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        High-performance anti-wear hydraulic oils engineered for superior system protection and efficiency.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_hydraulic oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                   Hydraulic Oil is a premium-quality fluid formulated to deliver outstanding protection, smooth power transmission, and long service life in hydraulic systems. Designed with advanced anti-wear additives and oxidation inhibitors, it ensures reliable performance under high pressure and varying temperature conditions.
+            </p>
+            <div class="oil-ul">   
+                <p>Available in AW (Anti-Wear) and HLP grades, these oils provide excellent thermal stability, corrosion protection, and resistance to sludge formation, making them suitable for modern industrial and mobile hydraulic systems.</p>
+                    <ul>
+                        <p>Available Grades:</p>
+                    </ul>
+                    <ul>
+                        <p><strong>AW Series</strong></p>
+                        <li>HYD Oil AW 32</li>
+                        <li>HYD Oil AW 46</li>
+                        <li>HYD Oil AW 68</li>
+                        <li>HYD Oil AW 100</li>
+                    </ul>
+                    <ul>
+                        <p><strong>HLP Series</strong></p>
+                        <li>HYD Oil HLP 32</li>
+                        <li>HYD Oil HLP 46</li>
+                        <li>HYD Oil HLP 68</li>
+                    </ul>
+                </div>
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications – AW Series</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>AW 32</th>
+                            <th>AW 46</th>
+                            <th>AW 68</th>
+                            <th>AW 100</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.850 – 0.875 </td>
+                            <td>0.850 – 0.875 </td>
+                            <td>0.860 – 0.885 </td>
+                            <td>0.865 – 0.885 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>28 – 35</td>
+                            <td>42 – 50</td>
+                            <td>62 – 72</td>
+                            <td>95 – 105</td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>Min 5.0</td>
+                            <td>Min 5.0</td>
+                            <td>Min 7.0</td>
+                            <td>Min 8.50</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 90</td>
+                            <td>Min 90</td>
+                            <td>Min 90</td>
+                            <td>Min 90</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 200°C</td>
+                            <td>Min 200°C</td>
+                            <td>Min 210°C </td>
+                            <td>Min 210°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -6°C</td>
+                            <td>Max -6°C</td>
+                            <td>Max -6°C</td>
+                            <td>Max -6°C</td>
+                        </tr>
+                        <tr>
+                            <td>Total Acid Number(mg KOH/gm)</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="section-subheading">Technical Specifications – HLP Series</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>HLP 32</th>
+                            <th>HLP 46</th>
+                            <th>HLP 68</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 0.5 </td>
+                            <td> < 0.5 </td>
+                            <td> < 0.5 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.840 – 0.855 </td>
+                            <td>0.840 – 0.860 </td>
+                            <td>0.845 – 0.865 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>28 – 35</td>
+                            <td>42 – 50</td>
+                            <td>62 – 72</td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>Min 5.0</td>
+                            <td>Min 5.0</td>
+                            <td>Min 7.0</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 100</td>
+                            <td>Min 100</td>
+                            <td>Min 100</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 210°C </td>
+                            <td>Min 210°C </td>
+                            <td>Min 210°C </td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -12°C</td>
+                            <td>Max -15°C</td>
+                            <td>Max -15°C</td>
+                        </tr>
+                        <tr>
+                            <td>Total Acid Number(mg KOH/gm)</td>
+                            <td>Max 1.00</td>
+                            <td>Max 1.00</td>
+                            <td>Max 1.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Anti-Wear Protection</li>
+                <li>High Oxidation & Thermal Stability</li>
+                <li>Superior Rust & Corrosion Protection</li>
+                <li>Reduced Sludge & Deposit Formation</li>
+                <li>Smooth Hydraulic Power Transmission</li>
+                <li>Enhanced Pump & Valve Life</li>
+                <li>Good Water Separation Properties</li>
+                <li>Stable Viscosity Performance</li>
+                <li>Reliable Operation in Wide Temperature Range</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Industrial Hydraulic Systems</li>
+                <li>Hydraulic Presses</li>
+                <li>Injection Molding Machines</li>
+                <li>Construction Equipment</li>
+                <li>Earthmoving Machinery</li>
+                <li>Mobile Hydraulic Systems</li>
+                <li>CNC & Manufacturing Units</li>
+                <li>Power Plants & Heavy Engineering</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <P><strong>AW Series</strong></P>
+                <li>Strong Anti-Wear Additive System</li>
+                <li>Stable Viscosity Index (Min 90)</li>
+                <li>Flash Point Up to 210°C</li>
+                <li>Suitable for Moderate to Heavy Load Systems</li>
+            </ul>
+            <ul class="chemical-list">
+                <P><strong>HLP Series</strong></P>
+                <li>Higher Viscosity Index (Min 100)</li>
+                <li>Improved Low Temperature Flow</li>
+                <li>Enhanced Oxidation Resistance</li>
+                <li>Cleaner & Lighter Appearance (< 0.5 Gardner)</li>
+                <li>Lower Acid Formation (Max 1.00 TAN)</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

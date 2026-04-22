@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}NPCPL | Careers{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/career.css') }}">
+
+<section class="career-hero">
+    <div class="career-overlay">
+        <h1>Build Your Career With Us</h1>
+        <p>Join the Legacy. Fuel the Future. Build your career with NPCPL.</p>
+    </div>
+</section>
+
+<section class="career-section">
+    <div class="career-container">
+
+        <div class="career-form-box">
+            <h2>Apply for a Position</h2>
+
+            <form id="careerForm" enctype="multipart/form-data">
+
+                <div class="input-group">
+                    <input type="text" name="name" required>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" name="phone" required>
+                    <label>Contact Number</label>
+                </div>
+
+                <div class="input-group">
+                    <label>Position</label>
+                        <select name="position" required>
+                            <option value=""disabled selected>Select Position</option>
+                            <option>Sales</option>
+                            <option>Marketing</option>
+                            <option>HR</option>
+                            <option>Accountant</option>
+                            <option>R&D</option>
+                            <option>Chemical Specialist</option>
+                        </select>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" name="experience" min="0" required>
+                    <label>Years of Experience</label>
+                </div>
+
+                <div class="input-group file-upload">
+                    <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+                    <span>Upload Resume (PDF/DOC)</span>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" rows="4" required></textarea>
+                    <label>Message</label>
+                </div>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+
+        <div class="career-image">
+            <img src="{{ url_for('static', filename='image/career.png') }}" alt="Careers">
+        </div>
+
+    </div>
+        <div class="product-disclaimer">
+            <p><strong>Note:</strong> NPCPL conducts recruitment only through our official website. We do not post job openings on any external platforms. Please apply directly via our Careers page to ensure authenticity.</p>
+        </div>  
+</section>
+
+<!-- Success Popup -->
+<div class="popup" id="successPopup">
+    <div class="popup-box">
+        <h3>Application Submitted 🎉</h3>
+        <p>Your application has been successfully submitted.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/career.js') }}"></script>
+{% endblock %}

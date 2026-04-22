@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block title %}Oils | ATF {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/automative_transmission_fluid.png') }}"
+                     alt="AUTOMATIC TRANSMISSION FLUID"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Automatic Transmission Fluid
+                        <span class="chemical-code">(ATF)</span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Engineered transmission fluid for extreme operating environments.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_automatic_transmission_fluid.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+            Automatic Transmission Fluid (ATF) is a high-performance lubricant specially formulated for automatic transmissions. 
+            It ensures smooth gear shifting, excellent thermal stability, wear protection, and extended transmission life under demanding operating conditions.
+            </p>
+            <div class="oil-ul">
+                <p><strong>Available Grades:</strong></p>
+                <ul>
+                    <li>ATF Type A</li>
+                    <li>ATF Dexron III</li>
+                    <li>ATF Dexron VI</li>
+                </ul>
+            </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>ATF Type A</th>
+                            <th>ATF Dexron III</th>
+                            <th>ATF Dexron VI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.830 – 0.860 </td>
+                            <td>0.830 – 0.860 </td>
+                            <td>0.830 – 0.860 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>To Report</td>
+                            <td>To Report</td>
+                            <td>To Report</td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>7.00 to 8.50</td>
+                            <td>40 to 50</td>
+                            <td>6 to 8</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 110</td>
+                            <td>Min 140</td>
+                            <td>Min 140</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point, COC</td>
+                            <td>Min 190°C</td>
+                            <td>Min 200°C </td>
+                            <td>Min 200°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -18°C</td>
+                            <td>Max -30°C </td>
+                            <td>Max -33°C </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Smooth & Seamless Gear Shifting</li>
+                <li>High Thermal & Oxidation Stability</li>
+                <li>Superior Wear Protection</li>
+                <li>Excellent Friction Control</li>
+                <li>Improved Fuel Efficiency</li>
+                <li>Extended Drain Intervals</li>
+                <li>Outstanding Low-Temperature Flow</li>
+                <li>High Flash Point for Safety</li>
+                <li>Enhanced Transmission Durability</li>
+
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Passenger Cars with Automatic Transmission</li>
+                <li>SUVs & Light Commercial Vehicles</li>
+                <li>Heavy Duty Vehicles (where applicable grade is recommended)</li>
+                <li>Power Steering Systems</li>
+                <li>Hydraulic Systems requiring ATF specification</li>
+                <li>Modern Transmission Systems requiring Dexron III / Dexron VI</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear & Bright Appearance</li>
+                <li>Density Range: 0.830 – 0.860</li>
+                <li>High Viscosity Index (Min 110 – 140 depending on grade)</li>
+                <li>High Flash Point (Min 190°C – 200°C)</li>
+                <li>Low Pour Point (Up to -33°C for Dexron VI)</li>
+                <li>Excellent Thermal Stability</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

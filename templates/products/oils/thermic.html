@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% block title %}Oils | Thermic Fluids {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/thermic_fluids.png') }}"
+                     alt="Thermic Fluids"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Thermic Fluids
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        High-efficiency heat transfer fluids engineered for thermal stability and long service life.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_thermic_fluids.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                    Thermic Fluids are specially formulated heat transfer oils designed for efficient thermal energy transfer in closed-loop and open heating systems. These fluids provide excellent oxidation resistance, thermal stability, and protection against sludge formation at elevated operating temperatures.
+            </p>
+            <div class="oil-ul">
+                <p>Available in Thermic Fluids 500 and Thermic Fluids 600 grades, they ensure consistent heat transfer performance and long operational life in industrial heating applications.</p>
+                    <ul>
+                        <p>Available Grades:</p>
+                        <li>Thermic Fluids 500</li>
+                        <li>Thermic Fluids 600</li>
+                    </ul>
+            </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>Thermic Fluids 500</th>
+                            <th>Thermic Fluids 600</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.860 – 0.875 </td>
+                            <td>0.850 – 0.870 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>28 – 32</td>
+                            <td>28 – 35</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>To Report</td>
+                            <td>To Report</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 90</td>
+                            <td>Min 100</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 200°C</td>
+                            <td>Min 210°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -9°C</td>
+                            <td>Max -12°C</td>
+                        </tr>
+                        <tr>
+                            <td>Total Acid Number(mg KOH/gm)</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Thermal Stability</li>
+                <li>High Oxidation Resistance</li>
+                <li>Efficient Heat Transfer Capability</li>
+                <li>Low Sludge & Deposit Formation</li>
+                <li>Extended Fluid Service Life</li>
+                <li>Reduced Maintenance Costs</li>
+                <li>Stable Performance at Elevated Temperatures</li>
+                <li>Good Low-Temperature Flow Characteristics</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Thermic Fluid Heaters</li>
+                <li>Chemical Processing Units</li>
+                <li>Textile Industry Heating Systems</li>
+                <li>Asphalt Plants</li>
+                <li>Oil & Gas Processing</li>
+                <li>Food Processing Industries</li>
+                <li>Plastic & Rubber Processing</li>
+                <li>Industrial Boilers & Heat Exchangers</li>
+            </ul>
+            <p>Suitable for high-temperature heat transfer systems operating under atmospheric or controlled pressure conditions.</p>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear & Bright Fluid</li>
+                <li>Density Range: 0.850 – 0.875</li>
+                <li>High Flash Point (Up to 210°C)</li>
+                <li>Low Pour Point (Up to -12°C)</li>
+                <li>Controlled Acid Formation (Max 1.50 TAN)</li>
+                <li>Improved Viscosity Index (Up to 100)</li>
+                <li>Consistent Heat Transfer Efficiency</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

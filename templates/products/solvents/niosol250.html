@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% block title %}Solvents | NIOSOL 250 {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/niosol250.png') }}"
+                     alt="Niosol 250"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        NIOSOL 250
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                       Advanced formulation developed for superior solvency and high-temperature industrial performance.
+                    </p>
+                     <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_niosol_250.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+              NIOSOL 250 is a high-aromatic hydrocarbon solvent engineered for applications requiring strong solvency, high flash point, and excellent thermal stability. It ensures consistent and reliable performance in demanding industrial environments.   
+            </p>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Test Method</th>
+                            <th>Unit</th>
+                            <th>Specification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Visual</td>
+                            <td> -- </td>
+                            <td>Pale</td>
+                        </tr>
+                        <tr>
+                            <td>Specific Gravity</td>
+                            <td>ASTM D 4052</td>
+                            <td> gm/ml </td>
+                            <td>0.970 – 1.03 @ 30°C </td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point PMCC </td>
+                            <td>ASTM D 93</td>
+                            <td> °C </td>
+                            <td> > 110 </td>
+                        </tr>
+                        <tr>
+                            <td>Aromatic Content</td>
+                            <td> GC </td>
+                            <td> % V/V </td>
+                            <td> 95 % - 99 % </td>
+                        </tr>
+                        <tr>
+                            <td>Distillaation Range</td>
+                            <td>ASTM D 86</td>
+                            <td>°C</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>IBP</td>
+                            <td>ASTM D 86</td>
+                            <td>°C</td>
+                            <td>240 - 255</td>
+                        </tr>
+                        <tr>
+                            <td>Dry Point</td>
+                            <td>ASTM D 86</td>
+                            <td>°C</td>
+                            <td>340 - 365</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Very High Aromatic Content for Maximum Solvency</li>
+                <li>High Flash Point for Safer Handling</li>
+                <li>Excellent Thermal Stability</li>
+                <li>Suitable for High-Temperature Applications</li>
+                <li>Consistent Composition & Performance</li>
+                <li>Clear & Sediment-Free Quality</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Heavy-Duty Paints & Coatings</li>
+                <li>Industrial Thinner Formulations</li>
+                <li>Rubber & Polymer Processing</li>
+                <li>High-Temperature Cleaning Applications</li>
+                <li>Adhesives & Sealants/li>
+                <li>Solvent Blending</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Very Slight Pale Color with Clear Appearance</li>
+                <li>High Specific Gravity (0.970 – 0.990)</li>
+                <li>Very High Aromatic Content (98 – 100%)</li>
+                <li>Wide Distillation Range (240°C – 320°C)</li>
+                <li>High Flash Point (100 – 110°C)</li>
+                <li>Strong, Stable & High-Temperature Performance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('solvent_list') }}" class="product-btn">
+                ← Back to Industrial Solvent
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

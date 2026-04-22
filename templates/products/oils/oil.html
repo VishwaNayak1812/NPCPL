@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block title %}Industrial Oils{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/solvent.css') }}">
+<section class="products-section">
+    <div class="products-container">
+         <div class="back-wrapper">
+            <a href="{{ url_for('product') }}" class="product-btn back-btn">
+                 ← Back to Products
+            </a>
+        </div>
+        <h1 class="section-title">Industrial <span class="gold"> Oils</span></h1>
+        <p class="section-subtitle">
+           Engineered solutions in base fluids, thermal transfer, lubrication, and process efficiency.
+        </p>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <h3>Automatic transmission Fuel</h3>
+                <p>Precision-engineered fluid for smooth shifting and lasting transmission protection.</p>
+                <a href="{{ url_for('atf') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Automotive Gear Oil</h3>
+                <p>High-load gear protection for superior torque and durability.</p>
+                <a href="{{ url_for('ago') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Base Oil</h3>
+                <p>Premium base stock for advanced lubrication and formulation performance.</p>
+                <a href="{{ url_for('base') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Brake Oil</h3>
+                <p>Reliable hydraulic performance for maximum braking safety.</p>
+                <a href="{{ url_for('brake') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Compressor Oil</h3>
+                <p>High-stability lubrication for efficient compressor performance.</p>
+                <a href="{{ url_for('compressor') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Cutting Oil</h3>
+                <p>Advanced metalworking fluid for precision machining and tool life.</p>
+                <a href="{{ url_for('cutting') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Bike Engine Oil</h3>
+                <p>High-performance engine protection for powerful two-wheel mobility.</p>
+                <a href="{{ url_for('bike') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Thermic fluids</h3>
+                <p>Efficient heat transfer solution for high-temperature industrial systems.</p>
+                <a href="{{ url_for('thermic') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Hydraulic Oil</h3>
+                <p>Power transmission fluid for smooth and responsive hydraulic systems.</p>
+                <a href="{{ url_for('hydraulic') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Industrial Gear Oil</h3>
+                <p>Extreme-pressure protection for heavy-duty industrial gear systems.</p>
+                <a href="{{ url_for('igo') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Machine Oil</h3>
+                <p>Reliable lubrication for continuous industrial operations.</p>
+                <a href="{{ url_for('machine') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Quenching Oil</h3>
+                <p>Controlled cooling solution for superior metal hardening results.</p>
+                <a href="{{ url_for('quenching') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Spindle Oil</h3>
+                <p>Low-viscosity precision lubrication for high-speed spindle systems.</p>
+                <a href="{{ url_for('spindle') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

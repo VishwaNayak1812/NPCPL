@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}NPCPL | About Us{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+<section class="hero-about">
+    <div class="hero-content">
+        <div class="hero-text">
+
+            <h1>Trusted Partner in Petrochemical Solutions</h1>
+            <p class="subtitle">Over a decade of expertise in manufacturing, exporting, and importing high-purity solvents.</p>
+            <p class="description">
+                For more than 20 years, New Age Petro Conchem Pvt Ltd (NPCPL) has been a reliable partner to industries in Pesticides, Ink, Paint, and Varnish. 
+                We connect advanced chemical manufacturing with global industrial needs.
+            </p>
+        </div>
+
+        <div class="hex-grid">
+            <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/power.jpg') }}" alt="Power"></div></div>
+            <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/phrama.jpg') }}" alt="Pharma"></div></div>
+            <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/chemical-plant-refinery.jpg') }}" alt="Plant"></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="about-details">
+    <div class="container">
+        
+        <div class="info-flex">
+            <div class="image-block">
+                <img src="{{ url_for('static', filename='image/hero.jpeg') }}" alt="NPCPL Facility">
+            </div>
+            <div class="text-block">
+                <h2>Our Journey of Excellence</h2>
+                <p>
+                    Newage Petro and Conchem Pvt. Ltd. (NPCPL), established in 1994 (formerly known as Newage Industrial Oils Pvt. Ltd.), is a trusted name in the manufacturing, import, export, and supply of industrial oils, heavy aromatic solvents, and specialty chemicals for the oil and gas sector.
+                </p>
+                <p>
+                    With over three decades of industry presence, NPCPL has built a reputation rooted in integrity, technical excellence, and long-term partnerships. Under the visionary leadership of Mr. Girish Bhojak, the company has steadily evolved into a dependable and performance-driven organization serving both domestic and international markets.
+                </p>
+                <p>
+                    Headquartered in Vadodara, Gujarat (India), our manufacturing facility is equipped with modern infrastructure, advanced processing systems, and stringent quality control mechanisms. Our operations are aligned with recognized certifications and industry standards, ensuring that every product delivered meets uncompromising benchmarks of safety, consistency, and performance.
+                </p>
+
+            </div>
+        </div>
+        <div class="info-flex">
+            <div class="text-block">
+                <h2>Our Expertise & Market Reach</h2>
+                <p>
+                   Over the years, NPCPL has expanded its footprint across diverse industries including:
+                </p>
+                <ul>
+                    <li>Paints & Coatings</li>
+                    <li>Rubber & Polymers</li>
+                    <li>Adhesives & Sealants</li>
+                    <li>Lubricants</li>
+                    <li>Petrochemicals</li>
+                    <li>Oil & Gas</li>
+                    <li>Other allied industrial sectors</li>
+                </ul>
+                <p>
+                    Our extensive product portfolio, combined with deep technical understanding and market insight, enables us to deliver solutions that meet evolving industrial demands.
+                </p>
+            </div>
+            <div class="hex-info">
+                <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/ink.jpeg') }}" alt="Paint"></div></div>
+                <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/rubber_polymer.png') }}" alt="Rubber"></div></div>
+                <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/power.jpg') }}" alt="Power"></div></div>
+                <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/agricultural.png') }}" alt="Agricultural"></div></div>
+                <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/oil.png') }}" alt="Oil"></div></div>
+                <div class="hex-outer"><div class="hex-inner"><img src="{{ url_for('static', filename='image/about_refinery.jpeg') }}" alt="Plant"></div></div>
+            </div>
+        </div>
+
+            <div class="text-block">
+                <h2>Our Core Strengths</h2>
+                <div class="values-grid">
+                <div class="value-card">
+                    <h3>Competitive Pricing with Unmatched Quality</h3>
+                    <p>We optimize processes and sourcing to ensure cost efficiency without compromising product integrity.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Consistent & Certified Quality</h3>
+                    <p>Every batch is manufactured under controlled conditions and backed by certified processes and rigorous quality testing.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Reliable & Timely Delivery</h3>
+                    <p>Our streamlined logistics and supply chain management ensure dependable and on-time dispatch.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Customized Blending Solutions</h3>
+                    <p>We offer tailor-made formulations designed to meet specific operational and performance requirements of our clients.</p>
+                </div>    
+            </div>
+            
+            <div class="text-block">
+                <h2>Our Commitment</h2>
+                <p>
+                    At NPCPL, we believe that true growth is built on trust, reliability, and continuous improvement. We don’t just manufacture and supply products — we build enduring partnerships that contribute to our clients’ operational success.
+                </p>
+                <p>
+                    Our customer-centric philosophy, technical expertise, and commitment to innovation position us as more than just a supplier — we are a strategic partner in progress, dedicated to delivering value, performance, and long-term reliability in every engagement.
+                </p><br>
+            </div>
+
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Our Vision</h3>
+                <p>To lead the petrochemical industry by delivering world-class, sustainable solutions.</p>
+            </div>
+            <div class="value-card">
+                <h3>Core Values</h3>
+                <p>Safety, Go Green, Integrity, and Transparency guide every commercial policy.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

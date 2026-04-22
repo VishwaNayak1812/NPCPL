@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Industrial Chemicals{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/solvent.css') }}">
+<section class="products-section">
+    <div class="products-container">
+        <div class="back-wrapper">
+            <a href="{{ url_for('product') }}" class="product-btn back-btn">
+                 ← Back to Products
+            </a>
+        </div>
+
+        <h1 class="section-title">Industrial <span class="gold"> Chemicals</span></h1>
+        <p class="section-subtitle">
+            High-performance chemical solutions crafted for precision and process excellence.
+        </p>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <h3>Mix Xylene</h3>
+                <p>High-purity aromatic solvent for industrial processing applications.</p>
+                <a href="{{ url_for('mix_xylene') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Acetone</h3>
+                <p>Optimized for heat transfer and lubrication base formulations.</p>
+                <a href="{{ url_for('acetone') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Toluene</h3>
+                <p>Heavy aromatic solvent for demanding industrial environments.</p>
+                <a href="{{ url_for('toluene') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>IPA</h3>
+                <p>Heavy aromatic solvent for demanding industrial environments.</p>
+                <a href="{{ url_for('ipa') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Phenol</h3>
+                <p>Heavy aromatic solvent for demanding industrial environments.</p>
+                <a href="{{ url_for('phenol') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

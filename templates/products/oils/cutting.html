@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}Oils | Cutting oil {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/cutting_oil.png') }}"
+                     alt="Cutting Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Cutting Oil
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        High-performance metalworking fluid engineered for precision machining and superior tool life.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_cutting_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                   Cutting Oil is a premium-grade metalworking lubricant specially formulated to provide effective cooling, lubrication, and chip removal during machining operations. It enhances tool performance, improves surface finish, and extends tool life under demanding industrial conditions.
+            </p>
+            <div class="oil-ul">
+                    <p>Available in Soluble and Semi-Synthetic variants, it forms stable emulsions with water and delivers excellent corrosion protection, thermal control, and machining efficiency.</p>
+                    <ul>
+                        <p>Available Grades:</p>
+                        <li>Soluble Cutting Oil</li>
+                        <li>Semi-Synthetic Cutting Oil</li>
+                    </ul>
+            </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>Soluble Cutting Oil</th>
+                            <th>Semi-Synthetic Cutting Oil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.880 – 0.895 </td>
+                            <td>0.880 – 0.890 </td>
+                        </tr>
+                        <tr>
+                            <td>PH(5% Emulsion) </td>
+                            <td>8.50 – 9.50</td>
+                            <td>8.50 – 9.50</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 160°C</td>
+                            <td>Min 160°C</td>
+                        </tr>
+                        <tr>
+                            <td>Emulsion Test (5:1 & 20:1 ratio in 400ppm hardness water)</td>
+                            <td>Passes (No oil or cream separation observed)</td>
+                            <td>Passes (No oil or cream separation observed)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Cooling & Lubrication</li>
+                <li>Stable Emulsion Formation</li>
+                <li>Improved Surface Finish</li>
+                <li>Extended Tool Life</li>
+                <li>Protection Against Rust & Corrosion</li>
+                <li>Reduced Foam Formation</li>
+                <li>Superior Thermal Stability</li>
+                <li>Suitable for Hard Water Conditions</li>
+                <li>Clean Machining Performance</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>CNC Machining</li>
+                <li>Turning & Milling Operations</li>
+                <li>Drilling & Tapping</li>
+                <li>Grinding Operations</li>
+                <li>Automotive Component Manufacturing</li>
+                <li>General Metal Fabrication</li>
+                <li>Heavy Engineering Industries</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear & Bright Concentrate</li>
+                <li>Excellent Viscosity Stability</li>
+                <li>Density Range: 0.880 – 0.895</li>
+                <li>Stable pH Range (8.50 – 9.50)</li>
+                <li>High Flash Point (Min 160°C)</li>
+                <li>Excellent Emulsion Stability in Hard Water (400 ppm)</li>
+                <li>No Oil or Cream Separation</li>
+                <li>Consistent Machining Performance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

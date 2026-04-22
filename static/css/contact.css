@@ -1,0 +1,279 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ================= ROOT THEME ================= */
+:root {
+    /* Dark Theme */
+    --bg-dark: #020b18;
+    --glass-bg: rgba(2, 11, 24, 0.75);
+    --text-primary: #ffffff;
+    --text-gold: #d4af37;
+    --text-btn: #000;
+
+    --nav-idle: #ffffff;
+    --nav-active: #d4af37;
+
+    --accent-gold: #d4af37;
+    --accent-gold-soft: rgba(212, 175, 55, 0.25);
+
+    --hex-border: #d4af37;
+    --hex-text: #d4af37;
+    --hex-inner-bg: rgba(2, 11, 24, 0.85);
+
+    --footer-bg: linear-gradient(180deg, #040b14, #02060c);
+    --footer-text: #cfd6e0;
+    --footer-border: rgba(255, 200, 80, 0.25);
+    --footer-highlight: rgba(212, 175, 55, 0.05);
+
+    --border-muted: rgba(255, 255, 255, 0.18);
+}
+
+/* ================= LIGHT THEME ================= */
+[data-theme="light"] {
+    --bg-dark: #f0f4f8;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --text-primary: #002d5b;
+    --text-gold: #b8860b;
+    --text-btn: #fff;
+
+    --nav-idle: #002d5b;
+    --nav-active: #b8860b;
+
+    --accent-gold: #002d5b;
+    --accent-gold-soft: rgba(0, 45, 91, 0.08);
+
+    --hex-border: #002d5b;
+    --hex-text: #002d5b;
+    --hex-inner-bg: #f0f4f8;
+
+    --footer-bg: linear-gradient(180deg, #f7f9fc, #e9eef5);
+    --footer-text: #002d5b;
+    --footer-border: rgba(0, 45, 91, 0.2);
+    --footer-highlight: rgba(0, 45, 91, 0.06);
+
+    --border-muted: rgba(0, 45, 91, 0.25);
+}
+
+.gold {
+    color: var(--text-gold);
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+    padding: 80px 20px;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    opacity: 0.85;
+}
+
+/* ================= GRID ================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* ================= FORM & INFO CARDS ================= */
+.contact-form-card,
+.contact-info-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid var(--border-muted);
+}
+
+.contact-form-card h2,
+.contact-info-card h2 {
+    margin-bottom: 25px;
+    color: var(--text-gold);
+}
+
+/* ================= FORM ================= */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-muted);
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+/* ================= BUTTON ================= */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background:
+        var(--accent-gold
+    );
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--text-btn);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px var(--accent-gold-soft);
+}
+
+/* ================= INFO ================= */
+.info-item {
+    margin-bottom: 18px;
+}
+
+.info-item strong {
+    display: block;
+    color: var(--text-gold);
+    margin-bottom: 4px;
+}
+
+/* ================= MAP ================= */
+.map-section {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+}
+
+/* --- SUCCESS POPUP STYLING --- */
+.popup {
+    display: none; /* Hidden by default, changed to flex via JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Darker overlay */
+    backdrop-filter: blur(8px);    /* Professional blur effect */
+    z-index: 9999;                 /* Ensure it stays on top of everything */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup-box {
+    background: #020b18;           /* Matches your NPCPL dark theme */
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #d4af37;    /* NPCPL Gold Border */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 
+                0 0 15px rgba(212, 175, 55, 0.2); /* Subtle gold glow */
+    transform: scale(1);
+    animation: popupAnimation 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popup-box h3 {
+    color: #d4af37;               /* Gold Heading */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.popup-box p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.popup-box button {
+    background: #d4af37;          /* Gold Button */
+    color: #020b18;               /* Dark Text for contrast */
+    border: none;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.popup-box button:hover {
+    background: #ffffff;          /* Turns white on hover */
+    color: #020b18;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth Entrance Animation */
+@keyframes popupAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 480px) {
+    .popup-box {
+        padding: 30px 20px;
+    }
+    .popup-box h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

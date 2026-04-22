@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% block title %}Oils | Bike Oil {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/bikeoil.png') }}"
+                     alt="Bike Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Bike Oil
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Advanced 4T engine oil engineered for power, protection, and peak two-wheeler performance.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_bike_engine_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                   Bike Engine Oil 20W40 is a high-performance 4-stroke motorcycle engine oil formulated to deliver superior engine protection, smooth clutch operation, and enhanced riding performance. Designed for modern two-wheelers, it provides excellent thermal stability, wear protection, and engine cleanliness under city and highway riding conditions.
+            </p>
+                <div class="oil-ul">  
+                    <p>Available in API SL, SM, and SN grades, it ensures reliable lubrication and extended engine life even in demanding environments.</p> 
+                    <ul>    
+                        <p><strong>Available Grades:</strong></p>
+                        <li>20W40 API SL</li>
+                        <li>20W40 API SM</li>
+                        <li>20W40 API SN</li>
+                    </ul>
+                </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>20W40 API SL</th>
+                            <th>20W40 API SM</th>
+                            <th>20W40 API SN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 3.5 </td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.860 – 0.885 /td>
+                            <td>0.840 – 0.870 </td>
+                            <td>0.840 – 0.870 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>110 – 140 </td>
+                            <td>90 – 120 </td>
+                            <td>90 – 120</td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>12.50 – 14.50</td>
+                            <td>12.50 – 14.50</td>
+                            <td>12.50 – 14.50</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 110</td>
+                            <td>Min 130</td>
+                            <td>Min 130</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 210°C</td>
+                            <td>Min 210°C</td>
+                            <td>Min 210°C </td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -18°C</td>
+                            <td>Max -21°C</td>
+                            <td>Max -21°C</td>
+                        </tr>
+                        <tr>
+                            <td>TBN (Total Base Number)</td>
+                            <td>5.80 – 7.50</td>
+                            <td>5.80 – 7.50</td>
+                            <td>5.80 – 7.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Engine Wear Protection</li>
+                <li>Smooth Clutch & Gear Operation</li>
+                <li>High Thermal & Oxidation Stability</li>
+                <li>Reduced Engine Deposits</li>
+                <li>Improved Fuel Efficiency</li>
+                <li>Enhanced High-Temperature Performance</li>
+                <li>Strong Detergency & Dispersancy</li>
+                <li>Extended Engine Life</li>
+                <li>Reliable Cold Start Protection</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>4-Stroke Motorcycles</li>
+                <li>Scooters</li>
+                <li>Commuter Bikes</li>
+                <li>Performance Motorcycles</li>
+                <li>Gear-Integrated Engine Systems</li>
+                <li>Air-Cooled & Liquid-Cooled Engines</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear & Bright Appearance</li>
+                <li>Density Range: 0.840 – 0.885</li>
+                <li>Stable Viscosity Range (20W40 Grade)</li>
+                <li>High Flash Point (Min 210°C)</li>
+                <li>Strong TBN for Engine Cleanliness</li>
+                <li>Excellent Low-Temperature Flow (Up to -21°C)</li>
+                <li>High Viscosity Index for Stable Performance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

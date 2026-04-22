@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}NPCPL | Products {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+<section class="products-section">
+    <div class="products-container">
+        <h1 class="section-title">Our <span class="gold"> Products</span></h1>
+        <p class="section-subtitle">
+            High-performance petrochemical solutions engineered for reliability,
+            sustainability, and industrial excellence.
+        </p>
+         <div class="download-wrapper">
+            <a href="{{ url_for('static', filename='product_detail/product_catalog.pdf') }}" 
+                class="download-btn" download>
+                Download Product Catalog
+            </a>
+</div>
+
+        <div class="products-grid">
+
+            <!-- Product Card -->
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='image/industrial_solvents.jpg') }}" alt="Industrial Solvents">
+                <div class="product-content">
+                    <h3>Industrial Solvents </h3>
+                    <p>High-purity solvents for paints, coatings, inks, and chemical processes.</p>
+                    <a href="{{ url_for('solvent_list') }}" class="product-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='image/oils.jpg') }}" alt="Industrial Oils">
+                <div class="product-content">
+                    <h3>Industrial Oils</h3>
+                    <p>Engineered lubrication solutions designed for durability and peak performance.</p>
+                    <a href="{{ url_for('oil_list') }}" class="product-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='image/industrialoils.png') }}" alt="Fuel Additives">
+                <div class="product-content">
+                    <h3>Industrial chemical</h3>
+                    <p>Driving efficiency, protection, and performance.</p>
+                    <a href="{{ url_for('chemical_list') }}" class="product-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='image/otherchemical.jpg') }}" alt="Specialized Coatings">
+                <div class="product-content">
+                    <h3>Other Chemicals</h3>
+                    <p>Innovative solutions for lasting industrial value.</p>
+                    <a href="{{ url_for('otherchem_list') }}" class="product-btn">View Details →</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-disclaimer">
+            <p><strong>Note:</strong> Technical specifications and performance figures reported across our product range are based on standardized laboratory testing and proprietary analytical methods.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

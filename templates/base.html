@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}NPCPL{% endblock %}</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='image/Favicon.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/market.js') }}" defer></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="glass-nav">
+    <div class="logo-box">
+        <img src="{{ url_for('static', filename='image/npcpl.png')}}" alt="Logo">
+    </div>
+    
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="main-nav" class="nav-menu">
+        <a href="{{ url_for('home') }}" class="nav-link {% if active=='home' %}active{% endif %}">HOME</a>
+        <a href="{{ url_for('about') }}" class="nav-link {% if active=='about' %}active{% endif %}">ABOUT US</a>
+        <a href="{{ url_for('product') }}" class="nav-link {% if active=='product' %}active{% endif %}">PRODUCTS</a>
+        <a href="{{ url_for('sustainbility') }}" class="nav-link {% if active=='sustainbility' %}active{% endif %}">SUSTAINABILITY</a>
+        <a href="{{ url_for('career') }}" class="nav-link {% if active=='career' %}active{% endif %}">CAREER</a>
+        <a href="{{ url_for('contact') }}" class="nav-link {% if active=='contact' %}active{% endif %}">CONTACT US</a>
+    </nav>
+
+    <div class="header-right">
+        <div id="digital-clock"></div>
+        <button id="theme-switch" class="theme-icon-btn">
+            <i class="fas fa-moon" id="mode-icon"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Market ticker -->
+<div class="market-ticker-bar">
+    <div class="market-ticker" id="marketTicker">Loading market data...</div>
+</div>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+    <!-- Top Subscribe Bar -->
+    <div class="footer-top">
+        <p>Get quarterly petro-insights directly to inbox</p>
+        <div class="subscribe-box">
+            <input type="email" placeholder="Email Address">
+            <button>JOIN →</button>
+        </div>
+    </div>
+    <div class="footer-content">
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company Profile</h4>
+            <img src="{{ url_for('static', filename='image/npcpl.png')}}" alt="Logo">
+            <p class="company-name">NPCPL</p>
+            <p>Driving petro-chemical industry with quality, trust, and global reach.</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/newage-industrial-oils-pvt-ltd/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61588338420396" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/NewAge_Oil" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/newagepetroconchempvt/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links-->
+         <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="footer-link">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="footer-link">About Us</a></li>
+                <li><a href="{{ url_for('product') }}" class="footer-link">Products</a></li>
+                <li><a href="{{ url_for('term') }}" class="footer-link">Terms of Service</a></li>
+                <li><a href="{{ url_for('contact') }}" class="footer-link">Contact Us</a></li>
+                <li><a href="{{ url_for('career') }}" class="footer-link">Careers</a></li>
+            </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="footer-col">
+            <h4>Product Categories</h4>
+            <ul>
+                <li><a href="{{ url_for('solvent_list') }}" class="footer-link">Industrial Solvents</a></li>
+                <li><a href="{{ url_for('chemical_list') }}" class="footer-link">Industrial Chemicals</a></li>
+                <li><a href="{{ url_for('oil_list') }}" class="footer-link">Industrial Oils</a></li>
+                <li><a href="{{ url_for('otherchem_list') }}" class="footer-link">Other Chemicals</a></li>
+                <li><a href="{{ url_for('product') }}" class="footer-link">Specialized Coatings</a></li>
+            </ul>
+        </div>
+
+        <!-- Sustainability -->
+        <div class="footer-col">
+            <h4>Sustainability</h4>
+            <ul>
+                <li><a href="{{ url_for('office') }}" class="footer-link">Global Offices</a></li>
+                <li><a href="{{ url_for('investor') }}" class="footer-link">Investor Relations</a></li>
+                <li><a href="{{ url_for('privacy') }}" class="footer-link">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Connect -->
+        <div class="footer-col">
+            <h4>Connect With Us</h4>
+            <ul>
+                <li>📍 Savli, Vadodara, Gujarat, India</li>
+                <li>☎ +91 9825574000, 9898096779</li>
+                <li>✉ newageoil.industries@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2025 NPCPL. All Rights Reserved</p>
+        <a href="#" class="back-to-top">↑</a>
+    </div>
+</footer>
+<!-- <script src="{{ url_for('static', filename='js/base.js') }}"></script> -->
+</body>
+</html>

@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Solvents | NIOSOL 150 {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/niosol150.png') }}"
+                     alt="Niosol 150"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        NIOSOL 150
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Enhanced chemical solution developed for improved efficiency and operational stability.
+                    </p>
+                     <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_niosol_150.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+              NIOSOL 150 is a high-purity aromatic hydrocarbon solvent with excellent solvency power, stable composition, and reliable performance, making it ideal for demanding industrial applications requiring strong dissolving capability.   
+            </p>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Test Method</th>
+                            <th>Unit</th>
+                            <th>Specification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Color</td>
+                            <td> ASTM D 1500 </td>
+                            <td> -- </td>
+                            <td> 0.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Visual</td>
+                            <td> -- </td>
+                            <td>Clear Liquid free from sediments</td>
+                        </tr>
+                        <tr>
+                            <td>Specific Gravity</td>
+                            <td>IS 1448 (P) 16</td>
+                            <td> gm/ml </td>
+                            <td>0.885 – 0.895 @ 30°C </td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point PMCC </td>
+                            <td>IS 1448 (P) 21</td>
+                            <td> °C </td>
+                            <td> 60 - 65 </td>
+                        </tr>
+                        <tr>
+                            <td>Aromatic Content</td>
+                            <td> IS 1448 (P) 48</td>
+                            <td> % V/V </td>
+                            <td> 100 % </td>
+                        </tr>
+                        <tr>
+                            <td>Distillaation Range</td>
+                            <td>Is 1448 (P) 18</td>
+                            <td>°C</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>IBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>180 - 190</td>
+                        </tr>
+                        <tr>
+                            <td>FBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>205 - 215</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>High Aromatic Content for Strong Solvency Power</li>
+                <li>Stable Composition for Reliable Performance</li>
+                <li>High Flash Point for Safer Handling</li>
+                <li>Consistent Distillation Characteristics</li>
+                <li>Clear & Sediment-Free Quality</li>
+                <li>Suitable for Heavy-Duty Industrial Applications</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Paints & Coatings Industry</li>
+                <li>Thinner Manufacturing</li>
+                <li>Adhesives & Sealants</li>
+                <li>Rubber & Polymer Processing</li>
+                <li>Industrial Cleaning</li>
+                <li>Solvent Blending</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Water White Color (0.0) with Clear Appearance</li>
+                <li>High Specific Gravity (0.885 – 0.895)</li>
+                <li>100% Aromatic Content for Maximum Solvency</li>
+                <li>Narrow Distillation Range (180°C – 215°C)</li>
+                <li>Higher Flash Point (60 – 65°C)</li>
+                <li>Consistent & High-Performance Solvent</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('solvent_list') }}" class="product-btn">
+                ← Back to Industrial Solvent
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

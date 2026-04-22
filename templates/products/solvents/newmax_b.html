@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Solvents | NewMax Grade B {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/newmax_b.jpg') }}"
+                     alt="Newmax B"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        NEWMAX GRADE B
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Advanced formulation developed for reliability and consistent industrial results.
+                    </p>
+                     <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_newmax_b.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                 NEWMAX B is a high-quality hydrocarbon solvent formulated with controlled aromatic content, offering balanced solvency, stability, and efficient performance for a wide range of industrial applications. 
+            </p>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Test Method</th>
+                            <th>Unit</th>
+                            <th>Specification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Color</td>
+                            <td> ASTM D 1500 </td>
+                            <td> -- </td>
+                            <td> ~ 0.3 (V.S. Pale) </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Visual</td>
+                            <td> -- </td>
+                            <td>Clear Liquid free from sediments</td>
+                        </tr>
+                        <tr>
+                            <td>Specific Gravity</td>
+                            <td>IS 1448 (P) 16</td>
+                            <td> gm/ml </td>
+                            <td>0.770 – 0.775 @ 30°C </td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point PMCC </td>
+                            <td>IS 1448 (P) 21</td>
+                            <td> °C </td>
+                            <td> 38 - 40 </td>
+                        </tr>
+                        <tr>
+                            <td>Aromatic Content</td>
+                            <td> IS 1448 (P) 48</td>
+                            <td> % V/V </td>
+                            <td> 20 - 25 </td>
+                        </tr>
+                        <tr>
+                            <td>Distillaation Range</td>
+                            <td>Is 1448 (P) 18</td>
+                            <td>°C</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>IBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>150 - 155</td>
+                        </tr>
+                        <tr>
+                            <td>FBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>210 - 225</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Balanced Aromatic Content for Controlled Solvency</li>
+                <li>Low Density for Versatile Industrial Use </li>
+                <li>Consistent Quality & Stable Composition </li>
+                <li>Good Evaporation Characteristics </li>
+                <li>Clear & Sediment-Free Product</li>
+                <li>Cost-Effective Solvent Solution</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Industrial Cleaning Applications</li>
+                <li>Thinner Formulations </li>
+                <li>Paints & Coatings Industry</li>
+                <li>Rubber Processing</li>
+                <li>Adhesives & Sealants </li>
+                <li>Solvent Blending</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Very Pale Color (~0.3) with Clear Appearance</li>
+                <li>Low Specific Gravity (0.770 – 0.775)</li>
+                <li>Moderate Aromatic Content (20 – 25%) </li>
+                <li>Stable Distillation Range (150°C – 225°C)</li>
+                <li>Controlled Flash Point (38 - 40°C)</li>
+                <li>Reliable & Consistent Performance </li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('solvent_list') }}" class="product-btn">
+                ← Back to Industrial Solvent
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

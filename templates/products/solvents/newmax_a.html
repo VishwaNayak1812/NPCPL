@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}Solvents | NewMax Grade A {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/newmax_a.jpg') }}"
+                     alt="Newmax A"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        NEWMAX GRADE A
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Engineered chemical solution designed for enhanced performance and process efficiency.Engineered chemical solution designed for enhanced performance and process efficiency.
+                    </p>
+                     <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet _newmax_a.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                 NEWMAX A is a high-quality aromatic hydrocarbon solvent designed for industrial applications requiring excellent solvency, controlled volatility, and consistent performance. It is widely used in coatings, paints, adhesives, and chemical processing industries.
+            </p>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Test Method</th>
+                            <th>Unit</th>
+                            <th>Specification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Color</td>
+                            <td> ASTM D 1500 </td>
+                            <td> -- </td>
+                            <td> ~ 0.6 (S. Pale) </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Visual</td>
+                            <td> -- </td>
+                            <td>Clear Liquid free from sediments</td>
+                        </tr>
+                        <tr>
+                            <td>Specific Gravity</td>
+                            <td>IS 1448 (P) 16</td>
+                            <td> gm/ml </td>
+                            <td>0.920 – 0.935 @ 30°C </td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point PMCC </td>
+                            <td>IS 1448 (P) 21</td>
+                            <td> °C </td>
+                            <td> ~ 50 </td>
+                        </tr>
+                        <tr>
+                            <td>Aromatic Content</td>
+                            <td> IS 1448 (P) 48</td>
+                            <td> % V/V </td>
+                            <td> ~ 96 </td>
+                        </tr>
+                        <tr>
+                            <td>Distillaation Range</td>
+                            <td>Is 1448 (P) 18</td>
+                            <td>°C</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>IBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>155 - 170</td>
+                        </tr>
+                        <tr>
+                            <td>FBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>240 - 250</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>High Aromatic Content for Superior Solvency</li>
+                <li>Consistent Quality & Stable Composition</li>
+                <li>Excellent Compatibility with Industrial Formulations</li>
+                <li>Controlled Volatility for Safe Handling </li>
+                <li>Clear & Sediment-Free Product</li>
+                <li>Suitable for Wide Range of Applications</li>
+                <li>Extended Gear & Bearing Life</li>
+                <li>Reliable Performance in Chemical Processing</li>
+                <li>Enhanced Efficiency in Coating & Adhesive Systems</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Paints & Coatings Industry</li>
+                <li>Printing Inks</li>
+                <li>Adhesives & Sealants</li>
+                <li>Rubber & Polymer Processing</li>
+                <li>Chemical Manufacturing </li>
+                <li>Industrial Cleaning Solutions </li>
+                <li>Solvent-Based Formulations</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Pale Color (~0.6) with Clear Appearance</li>
+                <li>High Specific Gravity (0.920 – 0.935)</li>
+                <li>High Aromatic Content (~96%)</li>
+                <li>Stable Distillation Range (155°C – 250°C)</li>
+                <li>Reliable Flash Point (~50°C)</li>
+                <li>Excellent Solvency Power</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('solvent_list') }}" class="product-btn">
+                ← Back to Industrial Solvent
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

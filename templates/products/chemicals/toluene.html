@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Industrial Chemicals | Toluene {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/toluene.jpg') }}"
+                     alt="Toluene"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Toluene
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        High-strength aromatic solvent delivering excellent solvency and consistent industrial results.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_toluene.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+            Toluene is an aromatic hydrocarbon solvent widely used for its strong dissolving power and compatibility with various industrial formulations. It is a clear, water-insoluble liquid with a characteristic aromatic Odor.
+            </p>
+
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Strong Solvent Power</li>
+                <li>Good Chemical Stability</li>
+                <li>Excellent Compatibility</li>
+                <li>Enhances Coating Flow & Finish</li>
+                <li>Cost-Effective Industrial Solvent</li>
+                <li>Reliable Performance</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Paints, Coatings & Thinners</li>
+                <li>Printing Inks</li>
+                <li>Adhesives & Rubber Industry</li>
+                <li>Chemical Manufacturing</li>
+                <li>Fuel Blending Components</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performace Highlights</h2>
+            <ul class="chemical-list">
+                <li>High Purity (Min 99%)</li>
+                <li>Consistent Quality</li>
+                <li>Moderate Evaporation Rate</li>
+                <li>Strong Dissolving Capacity</li>
+                <li>Clear & Bright Appearance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('chemical_list') }}" class="product-btn">
+                ← Back to Industrial Chemicals
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

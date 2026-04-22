@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% block title %}Oils | Compressor oil {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/compressoroil.png') }}"
+                     alt="Compressor Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Compressor Oil
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        High-performance compressor lubrication engineered for efficiency, reliability, and extended equipment life.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_compressor_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                   Compressor Oil is a premium quality lubricant specially formulated for rotary, reciprocating, and screw compressors operating under high temperature and pressure conditions. It offers excellent oxidation resistance, thermal stability, and anti-wear protection to ensure efficient compressor operation and reduced maintenance costs.                   
+            </p>
+            <div class="oil-ul">
+                <p>Its strong lubricating film and superior cooling properties help prevent carbon deposits and varnish formation, ensuring long service intervals and consistent performance.</p>     
+                   <ul>
+                        <p>Available Grades:</p>
+                        <li>Compressor Oil 32</li>
+                        <li>Compressor Oil 46</li>
+                        <li>Compressor Oil 68</li>
+                        <li>Compressor Oil 100</li>
+                        <li>Compressor Oil 220</li>
+                    </ul>
+            </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>32</th>
+                            <th>46</th>
+                            <th>68</th>
+                            <th>100</th>
+                            <th>220</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 2.5 </td>
+                            <td> < 2.5 </td>
+                            <td> < 2.5 </td>
+                            <td> < 3.0 </td>
+                            <td> < 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.860 – 0.885 </td>
+                            <td>0.860 – 0.885 </td>
+                            <td>0.860 – 0.885 </td>
+                            <td>0.860 – 0.885 </td>
+                            <td>0.860 – 0.885 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>28 – 34</td>
+                            <td>42 – 50</td>
+                            <td>62 – 72</td>
+                            <td>95 – 105</td>
+                            <td>210 – 240</td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>Min 5.0</td>
+                            <td>Min 6.5</td>
+                            <td>Min 7.0</td>
+                            <td>Min 9.0</td>
+                            <td>Min 14.0</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 90</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 210°C</td>
+                            <td>Min 210°C</td>
+                            <td>Min 210°C</td>
+                            <td>Min 210°C</td>
+                            <td>Min 210°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -9°C</td>
+                            <td>Max -9°C</td>
+                            <td>Max -9°C</td>
+                            <td>Max -9°C</td>
+                            <td>Max -9°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Oxidation & Thermal Stability</li>
+                <li>Strong Anti-Wear Protection</li>
+                <li>Strong Lubricating Film Strength</li>
+                <li>Reduced Carbon & Varnish Formation</li>
+                <li>Extended Oil Drain Intervals</li>
+                <li>Enhanced Equipment Efficiency</li>
+                <li>Protection Against Rust & Corrosion</li>
+                <li>Stable Performance at High Temperatures</li>
+                <li>Reduced Maintenance & Downtime</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Rotary Screw Compressors</li>
+                <li>Reciprocating Air Compressors</li>
+                <li>Vane Compressors</li>
+                <li>Industrial Air Compression Systems</li>
+                <li>Manufacturing Plants</li>
+                <li>Automotive Workshops</li>
+                <li>Heavy-Duty Industrial Equipment</li>
+            </ul>
+            <p>Suitable for industrial compressors operating under continuous and heavy-duty conditions.</p>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear & Bright Appearance</li>
+                <li>Density Range: 0.850 – 0.885</li>
+                <li>Wide Viscosity Range (32 to 220)</li>
+                <li>High Flash Point (Min 210°C)</li>
+                <li>Stable Pour Point (-9°C)</li>
+                <li>Strong Oxidation Resistance</li>
+                <li>Reliable High-Temperature Performance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

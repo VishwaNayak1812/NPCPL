@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Industrial Chemicals | Acetone {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/acetone.jpg') }}"
+                     alt="Acetone"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Acetone
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Ultra-fast evaporating solvent delivering powerful cleaning and high-performance industrial efficiency.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_acetone.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+            Acetone is a fast-evaporating, highly effective solvent widely used in industrial and commercial applications. It is a colourless, volatile liquid known for its excellent
+            solvency and quick drying properties.
+            </p>
+
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>High Solvent Power (Excellent solvency)</li>
+                <li>Very Fast Evaporation</li>
+                <li>Leaves No Residue</li>
+                <li>High Purity & Consistency</li>
+                <li>Effective Cleaning Agent</li>
+                <li>Wide Industrial Compatibility</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Paints, Coatings & Thinners</li>
+                <li>Nail Polish Removers & Cosmetics</li>
+                <li>Adhesives & Sealants</li>
+                <li>Cleaning & Degreasing</li>
+                <li>Pharmaceutical & Chemical Processing</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performace Highlights</h2>
+            <ul class="chemical-list">
+                <li>High Purity (Min 99.5%)</li>
+                <li>Ultra-Fast Evaporation</li>
+                <li>Low Boiling Point</li>
+                <li>Strong Cleaning Efficiency</li>
+                <li>Clear & Bright Appearance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('chemical_list') }}" class="product-btn">
+                ← Back to Industrial Chemicals
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

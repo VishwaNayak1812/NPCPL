@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% block title %}Oils | AGO {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/ago.png') }}"
+                     alt="Automotive Gear Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Automotive Gear Oil
+                        <span class="chemical-code">(AGO)</span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Engineered gear protection for extreme loads and demanding driving conditions.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_automative_gear_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                    Automotive Gear Oil (AGO) is a high-performance lubricant specially formulated for manual transmissions, differentials, and gearboxes operating under heavy loads and extreme pressure conditions. It provides superior wear protection, oxidation stability, and smooth power transmission, ensuring extended gear life and reliable performance.
+            </p>
+             <div class="oil-ul">
+                <p><strong>Available Grades:</strong></p>
+                <ul>
+                    <li>Gear Oil 90 (API GL-4)</li>
+                    <li>Gear Oil 80W90</li>
+                    <li>Gear Oil 75W90</li>
+                    <li>Gear Oil 85W140</li>
+                </ul>
+            </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>Gear Oil 90(API GL-4)</th>
+                            <th>80W90</th>
+                            <th>75W90</th>
+                            <th>85W140</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 4.5 </td>
+                            <td> < 4.5 </td>
+                            <td> < 4.5 </td>
+                            <td> < 4.5 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.870 – 0.885 </td>
+                            <td>0.870 – 0.890 </td>
+                            <td>0.850 – 0.870 </td>
+                            <td>0.880 – 0.895 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>To Report</td>
+                            <td>To Report</td>
+                            <td>To Report</td>
+                            <td>To Report</td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>13.50 to 17.50</td>
+                            <td>13.50 to 17.50</td>
+                            <td>13.50 to 15.50</td>
+                            <td>26.50 to 31.50</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 95</td>
+                            <td>Min 155</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 190°C</td>
+                            <td>Min 190°C</td>
+                            <td>Min 190°C </td>
+                            <td>Min 200°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -6°C</td>
+                            <td>Max -15°C</td>
+                            <td>Max -15°C</td>
+                            <td>Max -15°C</td>
+                        </tr>
+                        <tr>
+                            <td>Total Acid Number(mg KOH/gm)</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Extreme Pressure (EP) Protection</li>
+                <li>Superior Wear & Load Carrying Capacity</li>
+                <li>High Thermal & Oxidation Stability</li>
+                <li>Smooth Gear Engagement</li>
+                <li>Protection Against Rust & Corrosion</li>
+                <li>Reduced Gear Noise & Vibration</li>
+                <li>Extended Gear & Bearing Life</li>
+                <li>Strong Film Strength Under Heavy Loads</li>
+                <li>Reliable Performance in High & Low Temperatures</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Manual Transmission Systems</li>
+                <li>Differential & Final Drive Units</li>
+                <li>Hypoid Gears</li>
+                <li>Passenger Cars</li>
+                <li>Commercial Vehicles</li>
+                <li>Off-Highway Equipment</li>
+                <li>Agricultural Machinery</li>
+                <li>Construction Equipment</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear & Bright Appearance</li>
+                <li>Excellent Viscosity Stability</li>
+                <li>High Flash Point for Safe Operation</li>
+                <li>Controlled Acidity (Max TAN 1.50)</li>
+                <li>Wide Temperature Performance Range</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

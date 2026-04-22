@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Industrial Chemicals | IPA {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/ipa.png') }}"
+                     alt="IPA"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Isopropyl Alcohol
+                        <span class="chemical-code">(IPA)</span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Fast-evaporating, high-purity solution for effective cleaning and disinfection.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_ipa.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+            IPA (Isopropyl Alcohol) is a widely used solvent and disinfectant known for its excellent cleaning properties, fast evaporation, and low residue formation. It is commonly used across pharmaceutical, industrial, and electronic applications.
+            </p>
+
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Cleaning & Disinfecting Agent</li>
+                <li>Fast Evaporation with Low Residue</li>
+                <li>Versatile Industrial Solvent</li>
+                <li>High Purity Levels Available</li>
+                <li>Safe & Effective for Electronics Cleaning</li>
+                <li>Wide Application Range</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Pharmaceuticals & Healthcare</li>
+                <li>Surface Disinfection & Sanitization</li>
+                <li>Electronics Cleaning</li>
+                <li>Printing & Ink Industry</li>
+                <li>Chemical Processing</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performace Highlights</h2>
+            <ul class="chemical-list">
+                <li>High Purity </li>
+                <li>Fast Evaporation Rate</li>
+                <li>Low Residue Formation</li>
+                <li>Excellent Cleaning Efficiency</li>
+                <li>Clear & Bright Appearance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('chemical_list') }}" class="product-btn">
+                ← Back to Industrial Chemicals
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

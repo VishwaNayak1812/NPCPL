@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}Other Chemicals | OGDC {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading --> 
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/oil_and_gas_drilling.jpg') }}"
+                     alt="AUTOMATIC TRANSMISSION FLUID"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Oil & Gas Drilling Chemicals
+                        <span class="chemical-code">(OGDC)</span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Advanced drilling chemical solutions engineered for superior wellbore performance, stability, and operational efficiency.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_oil_and_gas_drilling.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+            Oil & Gas Drilling Chemicals are specialized formulations used throughout the drilling and well construction process in hydrocarbon exploration and production. These chemicals play a critical role in optimizing drilling fluid performance, maintaining wellbore stability, protecting equipment, and ensuring efficient and safe extraction.
+            </p>
+            <p class="chemical-description">
+               Our products are developed with high-quality raw materials and advanced processing to deliver consistent performance under demanding drilling conditions, including high temperature, high pressure, and complex geological formations. 
+            </p>
+
+            <!-- Product Range -->
+            <h2 class="section-subheading">Product Range: </h2>
+                <ul class="chemical-list">
+                    <p>We offer a comprehensive portfolio of drilling and well-operation chemicals, including:</p>
+                    <li>Viscosifiers & Rheology Modifiers</li>
+                    <li>Fluid Loss Control Additives</li>
+                    <li>Shale Stabilizers</li>
+                    <li>Weighting Agents</li>
+                    <li>Surfactants & Emulsifiers</li>
+                    <li>Lubricants & Friction Rducers</li>
+                    <li>Pipe-freeing Agents</li>
+                    <li>Corrosion Inhibitors</li>
+                    <li>Biocides</li>
+                    <li>pH Control Agents</li>
+                    <li>Lost Circulation materials (LCM)</li>
+                </ul>
+
+            <!-- Technical Performance Highlights -->
+            <h2 class="section-subheading">Technical Performance Highlights:</h2>
+                <ul class="chemical-list">
+                    <li>Optimized Rheological Properties for Better Mud Performance</li>
+                    <li>Effective Fluid Loss Control in Porous Formations</li>
+                    <li>High Thermal Stability for HTHP Conditions</li>
+                    <li>Excellent Shale Inhibition Capability</li>
+                    <li>Reduced Torque & Drag through Superior Lubrication</li>
+                    <li>Strong Corrosion Protection for Equipment Longevity</li>
+                    <li>Enhanced Bacterial Control with Efficient Biocides</li>
+                    <li>Stable Performance Across Varying Salinity Conditions</li>
+                </ul>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Improved Drilling Efficiency & Reduced Non-Productive Time</li>
+                <li>Superior Wellbore Stability in Challenging Formations</li>
+                <li>Enhanced Equipment Protection & Longer Service Life</li>
+                <li>Reduced Fluid Loss & Operational Costs</li>
+                <li>Reliable Performance in Extreme Conditions (HTHP)</li>
+                <li>Environmentally Safer Formulation Options Available</li>
+                <li>Consistent Quality & Batch-to-Batch Reliability</li>
+                <li>Excellent Compatibility with Various Mud Systems</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Onshore & Offshore Drilling Operations</li>
+                <li>Water-Based Mud (WBM) Systems</li>
+                <li>Oil-Based Mud (OBM) Systems</li>
+                <li>High-Pressure High-Temperature Wells</li>
+                <li>Shale & Reactive Formation Drilling</li>
+                <li>Well Completion & Workover Operations</li>
+                <li>Cementing Applications</li>
+                <li>Enhanced Oil Recovery (EOR) Processes</li>
+            </ul>
+
+            <!-- Customization Capabilities  -->
+            <h2 class="section-subheading">Customization Capabilities (Our Key Strength)</h2>
+            <ul class="chemical-list">
+                <p>We provide tailor-made chemical solutions based on specific client and field requirements:</p>
+                <li>Customized Formulations for Different Geological Conditions</li>
+                <li>Performance Optimization for Temperature, Pressure & Salinity</li>
+                <li>Client-Specific Product Development</li>
+                <li>Client-Specific Product Development & Testing</li>
+                <li>Flexible Blending & Supply Capabilities</li>
+                <li>On-site Technical Support & Application Guidance</li>
+                <li>Cost-Effective Solutions Balancing Performance & Budget</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('otherchem_list') }}" class="product-btn">
+                ← Back to Other chemicals
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

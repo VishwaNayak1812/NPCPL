@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}Other Chemicals | WTC {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/water_trement.png') }}"
+                     alt="WTC"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Water Treatment Chemicals
+                        <span class="chemical-code">(WTC)</span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Engineered for Purity, Designed for Performance.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_water_treatment_chemicals.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+            Advanced chemical solutions engineered for clean, safe, and efficient water management across industrial and municipal systems.
+            </p>
+            
+            <!-- Product Range -->
+            <h2 class="section-subheading">Product Range: </h2>
+                <ul class="chemical-list">
+                    <p>We offer a wide range of water treatment chemicals, including:</p>
+                    <li>Coagulants & Flocculants</li>
+                    <li>Disinfectants & Biocides</li>
+                    <li>Scale Inhibitors</li>
+                    <li>Corrosion Inhibitors</li>
+                    <li>Antifoams & Defoamers</li>
+                    <li>pH Control Agents</li>
+                    <li>Antiscalants</li>
+                    <li>Oxidizing & Non-Oxidizing Agents</li>
+                </ul>
+
+            <!-- Technical Performance Highlights -->
+            <h2 class="section-subheading">Technical Performance Highlights:</h2>
+                <ul class="chemical-list">
+                    <li>Efficient Removal of Suspended & Colloidal Particles</li>
+                    <li>Strong Disinfection & Microbial Control</li>
+                    <li>Effective Scale Prevention & Deposit Control</li>
+                    <li>Reliable Corrosion Protection for Equipment</li>
+                    <li>Stable Performance Across Wide pH Levels</li>
+                    <li>Improved Water Clarity & Quality</li>
+                    <li>Reduced Foaming in Industrial Systems</li>
+                    <li>High Compatibility with Treatment Processes</li>
+                </ul>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Ensures Clean, Safe & Usable Water</li>
+                <li>Improves System Efficiency & Performance</li>
+                <li>Extends Equipment Life & Reduces Maintenance</li>
+                <li>Controls Scaling, Corrosion & Biological Growth</li>
+                <li>Cost-Effective Water Treatment Solutions</li>
+                <li>Consistent Quality & Reliable Results</li>
+                <li>Suitable for Diverse Water Conditions</li>
+                <li>Environmentally Responsible Options Available</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Industrial Water Treatment Systems</li>
+                <li>Municipal Water Treatment Plants</li>
+                <li>Wastewater & Effluent Treatment</li>
+                <li>Cooling Towers & Boiler Systems</li>
+                <li>Reverse Osmosis (RO) Plants</li>
+                <li>Sewage Treatment Plants (STP)</li>
+                <li>Food & Beverage Processing</li>
+                <li>Power Plants & Manufacturing Units</li>
+            </ul>
+
+            <!-- Customization Capabilities  -->
+            <h2 class="section-subheading">Customization Capabilities (Our Key Strength)</h2>
+            <ul class="chemical-list">
+                <p>We provide customized water treatment solutions based on client-specific requirements:</p>
+                <li>Formulations Based on Detailed Water Analysis</li>
+                <li>Tailored Solutions for Industry-Specific Needs</li>
+                <li>Optimization for pH, TDS & Contaminant Levels</li>
+                <li>Client-Specific Product Development</li>
+                <li>Flexible Supply & Technical Support</li>
+                <li>On-Site Guidance for Chemical Dosing & Usage</li>
+                <li>Cost vs Performance Optimization</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('otherchem_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

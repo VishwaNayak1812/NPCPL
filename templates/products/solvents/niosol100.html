@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Solvents | NIOSOL 100 {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/niosol100.jpg') }}"
+                     alt="Niosol 100"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        NIOSOL 100
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Precision-formulated solution designed for balanced performance in industrial applications.
+                    </p>
+                     <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_niosol_100.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                NIOSOL 100 is a highly refined aromatic hydrocarbon solvent offering exceptional purity and strong solvency, making it ideal for demanding industrial and chemical applications.
+            </p>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Test Method</th>
+                            <th>Unit</th>
+                            <th>Specification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Color</td>
+                            <td> ASTM D 1500 </td>
+                            <td> -- </td>
+                            <td> 0.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Visual</td>
+                            <td> -- </td>
+                            <td>Clear Liquid free from sediments</td>
+                        </tr>
+                        <tr>
+                            <td>Specific Gravity</td>
+                            <td>IS 1448 (P) 16</td>
+                            <td> gm/ml </td>
+                            <td>0.865 – 0.875 @ 30°C</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point PMCC </td>
+                            <td>IS 1448 (P) 21</td>
+                            <td> °C </td>
+                            <td> 45 - 50 </td>
+                        </tr>
+                        <tr>
+                            <td>Aromatic Content</td>
+                            <td> IS 1448 (P) 48</td>
+                            <td> % V/V </td>
+                            <td> 100 % </td>
+                        </tr>
+                        <tr>
+                            <td>Distillaation Range</td>
+                            <td>Is 1448 (P) 18</td>
+                            <td>°C</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>IBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>155 - 160</td>
+                        </tr>
+                        <tr>
+                            <td>FBP</td>
+                            <td></td>
+                            <td>°C</td>
+                            <td>185 - 190</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>100% Aromatic Content for Maximum Solvency </li>
+                <li>High Purity & Consistent Quality</li>
+                <li>Excellent Chemical Stability</li>
+                <li>Efficient Performance in Industrial Applications</li>
+                <li>Clear & Sediment-Free Composition</li>
+                <li>Reliable and Uniform Results</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Paints & Coatings Industry </li>
+                <li>Printing Inks  </li>
+                <li>Adhesives & Sealants</li>
+                <li>Chemical Manufacturing </li>
+                <li> Solvent-Based Formulations</li>
+                <li>Industrial Cleaning</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Water Clear Appearance (0.0)</li>
+                <li>Moderate Specific Gravity (0.865 – 0.875)</li>
+                <li>Full Aromatic Strength (100%)</li>
+                <li>Narrow & Stable Distillation Range (155°C – 190°C)</li>
+                <li>Reliable Flash Point (45 – 50°C)</li>
+                <li>Strong & Efficient Solvency Power </li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('solvent_list') }}" class="product-btn">
+                ← Back to Industrial Solvent
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

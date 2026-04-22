@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% block title %}Oils | IGO{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/igo.png') }}"
+                     alt="Industrial Gear Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Industrial Gear Oil
+                        <span class="chemical-code">(IGO)</span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Heavy-duty gear protection engineered for extreme load performance and long service life.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_industrial_gear_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                    Industrial Gear Oil is a high-performance lubricant formulated to provide superior protection against wear, scuffing, and extreme pressure in enclosed gear systems. Designed for heavy-duty industrial applications, it ensures smooth power transmission, reduced friction, and extended equipment life.
+            </p>
+            <div class="oil-ul">
+                <p>Available in multiple viscosity grades, it delivers excellent thermal stability, oxidation resistance, and load-carrying capability under severe operating conditions.</p>
+                    <ul>
+                        <p>Available Grades:</p>
+                        <li>Gear Oil 90 </li>
+                        <li>Gear Oil 140</li>
+                        <li>Gear Oil 150</li>
+                        <li>Gear Oil 220</li>
+                        <li>Gear Oil 320</li>
+                        <li>Gear Oil 460</li>
+                    </ul>
+            </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>90</th>
+                            <th>140</th>
+                            <th>150</th>
+                            <th>220</th>
+                            <th>320</th>
+                            <th>460</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 3.5 </td>
+                            <td> < 3.5 </td>
+                            <td> < 3.5 </td>
+                            <td> < 4.5 </td>
+                            <td> < 4.5 </td>
+                            <td> < 4.5 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.870 – 0.885 </td>
+                            <td>0.870 – 0.890 </td>
+                            <td>0.870 – 0.890 </td>
+                            <td>0.870 – 0.892 </td>
+                            <td>0.870 – 0.892 </td>
+                            <td>0.870 – 0.892 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>85 – 100 </td>
+                            <td>130 – 150</td>
+                            <td>140 – 160</td>
+                            <td>210 – 230</td>
+                            <td>310 – 330</td>
+                            <td>450 – 470</td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>Min 9.0</td>
+                            <td>Min 10.0</td>
+                            <td>Min 12.0</td>
+                            <td>Min 14.0</td>
+                            <td>Min 18.0</td>
+                            <td>Min 25.0</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                            <td>Min 85</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 190°C</td>
+                            <td>Min 190°C</td>
+                            <td>Min 190°C</td>
+                            <td>Min 190°C</td>
+                            <td>Min 200°C</td>
+                            <td>Min 200°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -6°C</td>
+                            <td>Max -3°C</td>
+                            <td>Max -3°C</td>
+                            <td>Max -3°C</td>
+                            <td>Max -3°C</td>
+                            <td>Max -3°C</td>
+                        </tr>
+                        <tr>
+                            <td>Total Acid NUmber(mg KOH/gm)</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                            <td>Max 1.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Extreme Pressure (EP) Protection</li>
+                <li>Superior Load Carrying Capacity</li>
+                <li>Reduced Gear Wear & Pitting</li>
+                <li>High Thermal & Oxidation Stability </li>
+                <li>Improved Efficiency & Smooth Operation</li>
+                <li>Strong Rust & Corrosion Protection</li>
+                <li>Extended Drain Intervals</li>
+                <li>Reliable Performance Under Heavy Loads</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Enclosed Industrial Gear Boxes</li>
+                <li>Cement & Steel Plants</li>
+                <li>Mining Equipment</li>
+                <li>Conveyor systems</li>
+                <li>Heavy-duty Industrial Drives</li>
+                <li>Rolling Mills</li>
+                <li>Crushers & Mixers</li>
+                <li>Marine & Offshore Gear Systems</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Wide Viscosity Range (90 to 460)</li>
+                <li>Stable Viscosity Index (Min 85)</li>
+                <li>High Flash Point (Up to 200°C)</li>
+                <li>Strong Film Strength Under Load</li>
+                <li>Low Acid Formation (Max 1.50 TAN)</li>
+                <li>Consistent Protection in High Torque Conditions</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

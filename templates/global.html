@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% block title %}NPCPL | Global Offices {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+<script src="{{ url_for('static', filename='js/global.js') }}" defer></script>
+<section class="global-offices">
+    <div class="container">
+        
+        <h2 class="section-title">Global <span>Offices</span></h2>
+        <a href="{{ url_for('sustainbility') }}" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back</span>
+        </a>
+        <div class="slider">
+        <div class="slides">
+
+        <div class="slide active">
+            <img src="{{ url_for('static', filename='image/manufcturing_unit.png')}}" alt="Manufacturing Unit">
+        </div>
+
+        <div class="slide">
+            <img src="{{ url_for('static', filename='image/lab.png')}}" alt="Factory View">
+        </div>
+
+        <div class="slide">
+            <img src="{{ url_for('static', filename='image/headquater.png')}}" alt="Production">
+        </div>
+
+    </div>
+
+    <!-- Buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+</div>
+
+<section class="team-section">
+    <div class="container">
+        <h2 class="section-title">Our <span>Leadership</span></h2>
+
+        <div class="team-grid">
+
+            <!-- Member -->
+            <div class="team-card" onclick="openProfile('chirag')">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='image/chirag.png') }}">
+                </div>
+                <h3>Chirag Bhojak</h3>
+                <p>CEO & Managing Director</p>
+            </div>
+
+            <div class="team-card" onclick="openProfile('ashok')">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='image/ashok.png') }}">
+                </div>
+                <h3>Ashok Vyas</h3>
+                <p>Managing Director</p>
+            </div>
+
+            <div class="team-card" onclick="openProfile('sudhir')">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='image/sudhir.png') }}">
+                </div>
+                <h3>Sudhir Kirshnan</h3>
+                <p>CMO</p>
+            </div>
+     
+            <!-- PROFILE MODAL (CORRECT POSITION) -->
+        <div id="profileModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeProfile()">&times;</span>
+
+                <div class="profile-box">
+
+            <!-- LEFT -->
+                <div class="profile-left">
+                    <img id="profileImg">
+                    <h3 id="profileName"></h3>
+                    <p class="profile-role" id="profileRole"></p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="profile-right">
+                <p id="profileDesc"></p>
+            </div>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+     <h2 class="section-title">Our <span>Gallery</span></h2>
+<div class="gallery-grid">
+
+    <div class="gallery-item" onclick="openGallery(0)">
+        <img src="{{ url_for('static', filename='image/foundercabin.jpeg') }}">
+    </div>
+
+    <div class="gallery-item" onclick="openGallery(1)">
+        <img src="{{ url_for('static', filename='image/ceocabin.png') }}">
+    </div>
+
+     <div class="gallery-item" onclick="openGallery(2)">
+        <img src="{{ url_for('static', filename='image/director.png') }}">
+    </div>
+
+    <div class="gallery-item" onclick="openGallery(3)">
+        <img src="{{ url_for('static', filename='image/waitting.png') }}">
+    </div>
+
+    <div class="gallery-item" onclick="openGallery(4)">
+        <img src="{{ url_for('static', filename='image/office.png') }}">
+    </div>
+
+    <div class="gallery-item" onclick="openGallery(5)">
+        <img src="{{ url_for('static', filename='image/confernceroom.jpeg') }}">
+    </div>
+
+    <div class="gallery-item" onclick="openGallery(6)">
+        <img src="{{ url_for('static', filename='image/ceo.png') }}">
+    </div>
+
+    <div class="gallery-item" onclick="openGallery(7)">
+        <img src="{{ url_for('static', filename='image/about_refinery.jpeg') }}">
+    </div>  
+    
+    <div class="gallery-item" onclick="openGallery(8)">
+        <img src="{{ url_for('static', filename='image/dispacthunit.jpg') }}">
+    </div> 
+
+    <div class="gallery-item" onclick="openGallery(9)">
+        <img src="{{ url_for('static', filename='image/oil_manafuctering.jpg') }}">
+    </div> 
+
+    <div class="gallery-item" onclick="openGallery(10)">
+        <img src="{{ url_for('static', filename='image/storage_tank.jpg') }}">
+    </div> 
+
+    <div class="gallery-item" onclick="openGallery(11)">
+        <img src="{{ url_for('static', filename='image/solventstorage.jpg') }}">
+    </div> 
+
+</div>
+
+<!-- GALLERY MODAL -->
+<div id="galleryModal" class="gallery-modal">
+    <span class="gallery-close" onclick="closeGallery()">&times;</span>
+
+    <div class="gallery-content">
+        <img id="galleryImg">
+        <div class="gallery-text">
+            <h3 id="galleryTitle"></h3>
+            <p id="galleryDesc"></p>
+        </div>
+    </div>
+</div>
+</section>
+{% endblock %}

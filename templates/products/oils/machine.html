@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %} Oils | Machine Oil{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/machineoil.png') }}"
+                     alt="Machine Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Machine Oil
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Reliable lubrication engineered for smooth machine performance and extended equipment life.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_machine_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                    Machine Oil is a high-quality general-purpose lubricant formulated to provide effective lubrication, wear protection, and smooth operation of industrial machinery. Designed for consistent performance, it ensures reduced friction, protection against rust and corrosion, and improved operational efficiency.
+            </p>
+            <p class="chemical-description">Its balanced viscosity and thermal stability make it suitable for a wide range of light to medium-duty industrial applications.</p>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>Machine Oil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.860 – 0.880 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>62 – 72 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>Min 5.0 </td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 90</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 200°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -6°C</td>
+                        </tr>
+                        <tr>
+                            <td>Total Acid Number(mg KOH/gm)</td>
+                            <td>Max 1.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Lubrication Performance</li>
+                <li>Reduced Friction & Wear</li>
+                <li>Good Oxidation Stability</li>
+                <li>Rust & Corrosion Protection</li>
+                <li>Smooth Machine Operation</li>
+                <li>Stable Viscosity Performance</li>
+                <li>Low Sludge Formation</li>
+                <li>Extended Equipment Service Life</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>General Industrial Machinery</li>
+                <li>Textile Machines</li>
+                <li>Light-Duty Gear Systems</li>
+                <li>Bearings & Circulating Systems</li>
+                <li>Workshop Equipment</li>
+                <li>Manufacturing Units</li>
+                <li>Pumps & Compressors (Non-Heavy Duty)</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear & Bright Appearance</li>
+                <li>Balanced Viscosity (62 – 72 @ 40°C)</li>
+                <li>High Flash Point (Min 200°C)</li>
+                <li>Stable Viscosity Index (Min 90)</li>
+                <li>Controlled Acid Formation (Max 1.50 TAN)</li>
+                <li>Reliable Protection in Moderate Operating Conditions</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

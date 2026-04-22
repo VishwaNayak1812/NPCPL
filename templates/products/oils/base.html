@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block title %}Oils | Base Oil {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/baseoil.png') }}"
+                     alt="Base Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Base Oil
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Premium quality base oils engineered for superior lubrication performance and formulation flexibility.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_base_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                    Base Oil is a high-purity refined mineral oil used as the primary component in the formulation of lubricants, greases, and specialty oils. It delivers excellent thermal stability, viscosity control, and oxidation resistance, making it ideal for automotive, industrial, and marine lubricant manufacturing.    
+            </p>
+                <div class="oil-ul"> 
+                    <p>Our Base Oils are carefully processed to ensure low impurity levels, consistent viscosity performance, and reliable blending characteristics for a wide range of lubricant applications.</p>
+                    <ul>    
+                        <p><strong>Available Grades:</strong></p>
+                        <li>SN 150 (GR01 / GR02 / GR03)</li>
+                        <li>8 CST</li>
+                        <li>SN 500 (GR01 / GR02)</li>
+                        <li>BS 150</li>
+                    </ul>
+                </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>SN 150 GR01</th>
+                            <th>SN 150 GR02</th>
+                            <th>SN 150 GR03 8CST</th>
+                            <th>SN 500 GR01</th>
+                            <th>SN 500 GR02</th>
+                            <th>BS 150</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 2.5 </td>
+                            <td> Colorless </td>
+                            <td> Colorless </td>
+                            <td> < 3.0 </td>
+                            <td> Colorless </td>
+                            <td> < 4.5 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.850 – 0.875 /td>
+                            <td>0.830 – 0.850 </td>
+                            <td>0.820 – 0.835 </td>
+                            <td>0.860 – 0.885 </td>
+                            <td>0.845 – 0.880 </td>
+                            <td>0.880 – 0.892 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>28 – 32 </td>
+                            <td>28 – 32 </td>
+                            <td>32 – 40 </td>
+                            <td>85 – 105 </td>
+                            <td>85 – 105 </td>
+                            <td>460 – 490 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 100°C </td>
+                            <td>Min 5.0</td>
+                            <td>Min 5.0</td>
+                            <td>Min 7.50</td>
+                            <td>Min 10.0</td>
+                            <td>Min 10.0</td>
+                            <td>Min 28.0</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 85</td>
+                            <td>Min 100</td>
+                            <td>Min 120</td>
+                            <td>Min 85</td>
+                            <td>Min 100</td>
+                            <td>Min 85</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 200°C</td>
+                            <td>Min 200°C</td>
+                            <td>Min 210°C</td>
+                            <td>Min 220°C </td>
+                            <td>Min 220°C </td>
+                            <td>Min 260°C</td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -6°C</td>
+                            <td>Max -12°C</td>
+                            <td>Max -15°C</td>
+                            <td>Max -6°C</td>
+                            <td>Max -12°C</td>
+                            <td>Max -3°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent Thermal & Oxidation Stability</li>
+                <li>Consistent Viscosity Performance</li>
+                <li>Low Sulfur & Impurity Levels</li>
+                <li>High Flash Point for Safe Operation</li>
+                <li>Good Low-Temperature Flow Properties</li>
+                <li>Strong Lubricating Film Strength</li>
+                <li>Ideal for Additive Blending</li>
+                <li>Enhanced Equipment Protection</li>
+                <li>Suitable for Automotive & Industrial Formulations</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Automotive Engine Oil Manufacturing</li>
+                <li>Gear Oil & Transmission Fluid Blending</li>
+                <li>Hydraulic Oil Formulations</li>
+                <li>Industrial Lubricants</li>
+                <li>Grease Manufacturing</li>
+                <li>Marine Lubricants</li>
+                <li>Metalworking Fluids</li>
+                <li>Transformer & Process Oils (specific grades)</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Clear, Bright & Colorless Appearance (depending on grade)</li>
+                <li>Density Range: 0.820 – 0.892</li>
+                <li>Kinematic Viscosity @ 40°C: 28 – 105 (depending on grade)</li>
+                <li>Kinematic Viscosity @ 100°C: Min 5.0 – 28.0</li>
+                <li>High Viscosity Index: Min 85 – 120</li>
+                <li>High Flash Point: Min 200°C – 260°C</li>
+                <li>Controlled Pour Point: Up to -15°C</li>
+                <li>Excellent Blending Compatibility</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

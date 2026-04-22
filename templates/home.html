@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}NPCPL | Home {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <main class="hero">
+        <div class="hero-overlay-content">
+            <h1 class="main-heading">NPCPL</h1>
+            <p class="sub-heading"><span id="typing-text"></span></span></p>
+        </div>
+
+        <div class="plant-visual-container">
+            <img src="{{ url_for('static', filename='image/home.png') }}" class="base-plant">
+        </div>
+    </main>
+<section class="about-section" id="about">
+    <div class="about-container">
+
+        <h2 class="section-title">
+            About <span class="gold">NPCPL</span>
+        </h2>
+<div class="about-home">
+    <p class="about-text">
+        <strong>NPCPL</strong> is a trusted global partner in the manufacturing, export, and import of
+        heavy aromatics and industrial solvents. With over a decade of industry expertise, we deliver
+        consistent quality, dependable supply chains, and competitive pricing to clients worldwide.
+    </p>
+
+    <p class="about-text">
+        We proudly support key sectors including <strong>Pesticides, Ink, Paint, and Varnish</strong>
+        manufacturing—ensuring our products meet the highest standards of performance and reliability.
+    </p>
+
+    <button class="btn-more-info" id="aboutMoreBtn" >
+        More Information
+        <span>→</span>
+    </button>
+</div>
+</div>
+</section>
+<section class="industries-section" id="industries">
+    <div class="industries-container">
+
+        <h2 class="section-title">
+            Industries <span class="gold">Served</span>
+        </h2>
+
+        <p class="section-subtitle">
+            Delivering high-quality heavy aromatics and industrial solvents across diverse industries worldwide.
+        </p>
+        
+        <div class="industries-grid">
+            
+            <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/c9.jpg') }}" alt="C9 Solvent">
+                </div>
+                <h3>C9 Solvent</h3>
+                <p>
+                    High-performance aromatic solvent widely used in resins, coatings, and industrial formulations.
+                </p>
+                <a href="{{ url_for('newmax_a') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/c10.jpg') }}" alt="C10 Solvent">
+                </div>
+                <h3>C10 Solvent</h3>
+                <p>
+                   Premium heavy aromatic solvent offering excellent solvency for paints, inks, and adhesives.
+                </p>
+                <a href="{{ url_for('niosol150') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/mto.jpg') }}" alt="MTO">
+                </div>
+                <h3>Mineral Turpentine Oil (MTO)</h3>
+                <p>
+                   Versatile petroleum solvent ideal for paint thinning, cleaning, and industrial applications.
+                </p>
+                <a href="{{ url_for('niomol') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/toluene.jpg') }}" alt="Toluene">
+                </div>
+                <h3>Toluene</h3>
+                <p>
+                    Pure aromatic solvent known for strong solvency in coatings, adhesives, and chemical processing.
+                </p>
+                <a href="{{ url_for('toluene') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/mix_xylene.jpg') }}" alt="Mix Xylene">
+                </div>
+                <h3>Mix Xylene</h3>
+                <p>
+                    Reliable aromatic solvent used in paints, printing inks, rubber, and leather industries.
+                </p>
+                <a href="{{ url_for('mix_xylene') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+            <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/acetone.jpg') }}" alt="Acetone">
+                </div>
+                <h3>Acetone</h3>
+                <p>
+                    Fast-evaporating solvent widely used for cleaning, degreasing, and chemical manufacturing.
+                </p>
+                <a href="{{ url_for('acetone') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+             <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/phenol.jpg') }}" alt="Phenol">
+                </div>
+                <h3>Phenol</h3>
+                <p>
+                    High-grade industrial chemical essential for resins, pharmaceuticals, and specialty chemicals.
+                </p>
+                <a href="{{ url_for('phenol') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+              <div class="industry-card">
+                <div class="industry-image">
+                    <img src="{{ url_for('static', filename='image/oil_and_gas_drilling.jpg') }}" alt="Oil and Gas Drilling">
+                </div>
+                <h3>Oil and Gas Drilling chemicals</h3>
+                <p>
+                    Specialized chemicals designed to enhance drilling efficiency, stability, and performance in oil & gas operations.
+                </p>
+                <a href="{{ url_for('gas') }}" class="read-more">
+                      Read More →
+                </a>
+            </div>
+        </div>
+        <button class="btn-more-info" id="productinfo">
+            View Products
+            <span>→</span>
+        </button>
+
+    </div>
+</section>
+        <section class="verticals" id="stats">
+             <h2 class="section-title">
+            Business <span class="gold">Highlights</span>
+        </h2>
+            <p class="section-subtitle">A snapshot of our experience, partnerships, and growth</p>
+            <div class="hex-grid">
+                <div class="hex-outer"><div class="hex-inner"><span class="hex-image"><img src="{{ url_for('static', filename='image/happy.png') }}"></span><span><h3 class="counter" data-target="300">0</h3></span><span>Happy Customers</span></div></div>
+                <div class="hex-outer"><div class="hex-inner"><span class="hex-image"><img src="{{ url_for('static', filename='image/trusted.png') }}"></span><span><h3 class="counter" data-target="200">0</h3></span><span>Trusted Suppliers</span></div></div>
+                <div class="hex-outer"><div class="hex-inner"><span class="hex-image"><img src="{{ url_for('static', filename='image/team.png') }}"></span><span><h3 class="counter" data-target="100">0</h3></span><span>Our Team</span></div></div>
+                <div class="hex-outer"><div class="hex-inner"><span class="hex-image"><img src="{{ url_for('static', filename='image/experience.png') }}"></span><span><h3 class="counter experience-counter" data-start-year="2005">0</h3></span><span>Years of Experience</span></div></div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

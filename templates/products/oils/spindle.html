@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block title %} Oils | Spindle Oil{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/spindle_oil.png') }}"
+                     alt="Spindle Oil"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Spindle Oil
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Ultra-light precision lubrication engineered for high-speed spindle performance.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_spindle_oil.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+                    Spindle Oil is a premium-quality, low-viscosity lubricant specially developed for high-speed spindles and precision machinery. It provides excellent lubrication, superior oxidation stability, and effective protection against wear and corrosion.
+            </p>
+            <div class="oil-ul">
+                <p>Designed to minimize friction and heat generation, Spindle Oil ensures smooth operation, improved efficiency, and extended equipment life in high-speed applications.</p>
+                    <ul>
+                        <p>Available Grades:</p>
+                        <li>Spindle Oil 10</li>
+                        <li>Spindle Oil 12</li>
+                        <li>Spindle Oil 22</li>
+                    </ul>
+            </div>
+
+            <!-- Table -->
+            <h2 class="section-subheading">Technical Specifications</h2>
+
+            <div class="table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Analytical Test</th>
+                            <th>10</th>
+                            <th>12</th>
+                            <th>22</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Colour by Gardner</td>
+                            <td> < 0.5 </td>
+                            <td> < 0.5 </td>
+                            <td> < 0.5 </td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                            <td>Clear & Bright</td>
+                        </tr>
+                        <tr>
+                            <td>Density @29.5°C</td>
+                            <td>0.820 – 0.840 </td>
+                            <td>0.820 – 0.840 </td>
+                            <td>0.820 – 0.840 </td>
+                        </tr>
+                        <tr>
+                            <td>K. Viscosity @ 40°C </td>
+                            <td>9 – 11</td>
+                            <td>11 – 13</td>
+                            <td>21 – 22</td>
+                        </tr>
+                        <tr>
+                            <td>Viscosity Index</td>
+                            <td>Min 95</td>
+                            <td>Min 95</td>
+                            <td>Min 95</td>
+                        </tr>
+                        <tr>
+                            <td>Flash Point (COC)</td>
+                            <td>Min 160°C</td>
+                            <td>Min 160°C</td>
+                            <td>Min 180°C </td>
+                        </tr>
+                        <tr>
+                            <td>Pour Point</td>
+                            <td>Max -12°C</td>
+                            <td>Max -12°C</td>
+                            <td>Max -9°C</td>
+                        </tr>
+                        <tr>
+                            <td>Copper Corrosion @ 100°C (3 Hrs)</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>Excellent High-Speed Lubrication</li>
+                <li>Reduced Friction & Heat Generation</li>
+                <li>Superior Oxidation Stability</li>
+                <li>Good Rust & Corrosion Protection</li>
+                <li>Low Deposit Formation</li>
+                <li>Smooth & Quiet Operation</li>
+                <li>Enhanced Bearing Life</li>
+                <li>Reliable Performance in Continuous Operation</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Textile Machinery Spindles</li>
+                <li>High-Speed Machine Tools</li>
+                <li>CNC Spindles</li>
+                <li>Light-Duty Bearings</li>
+                <li>Precision Instruments</li>
+                <li>Small Electric Motors</li>
+                <li>Circulating Oil Systems</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performance Highlights</h2>
+            <ul class="chemical-list">
+                <li>Ultra-Light Viscosity Grades (10, 12, 22)</li>
+                <li>Very Low Colour (< 0.5 Gardner)</li>
+                <li>Stable Viscosity Index (Min 95)</li>
+                <li>High Flash Point (Up to 180°C)</li>
+                <li>Excellent Low-Temperature Flow (-12°C)</li>
+                <li>Reliable Copper Corrosion Protection</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('oil_list') }}" class="product-btn">
+                ← Back to Industrial Oils
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

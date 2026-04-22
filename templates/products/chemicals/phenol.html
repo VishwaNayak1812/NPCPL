@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Industrial Chemicals | Phenol {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chemical_detail.css') }}">
+
+<section class="products-section">
+    <div class="products-container">
+
+        <!-- BIG CHEMICAL BOX -->
+        <div class="chemical-box">
+
+            <!-- Image + Heading -->
+            <div class="chemical-header">
+                <img src="{{ url_for('static', filename='image/phenol.jpg') }}"
+                     alt="Phenol"
+                     class="chemical-image">
+
+                <div class="chemical-header-text">
+                    <h1 class="section-title">
+                        Phenol
+                        <span class="chemical-code"></span>
+                    </h1>
+
+                    <p class="chemical-tagline">
+                        Essential industrial chemical for versatile manufacturing and synthesis applications.
+                    </p>
+                    <div class="download-section">
+                        <a href="{{ url_for('static', filename='product_detail/specification_sheet_phenol.pdf') }}"
+                        class="download-btn"
+                        download
+                        target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Datasheet</span>
+                        </a>
+
+                        <p class="file-info">PDF • Updated 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="chemical-description">
+            Phenol is a widely used aromatic organic compound known for its strong chemical reactivity and versatility in industrial applications. It is a colorless to light pink crystalline solid with excellent properties for use in chemical synthesis and manufacturing processes.
+            </p>
+
+
+            <!-- Advantages -->
+            <h2 class="section-subheading">Advantages</h2>
+            <ul class="chemical-list">
+                <li>High Chemical Reactivity</li>
+                <li>Excellent Intermediate for Chemical Synthesis</li>
+                <li>Widely Used Across Multiple Industries</li>
+                <li>Good Solubility in Organic Systems</li>
+                <li>Reliable & Consistent Industrial Performance</li>
+                <li>Essential Raw Material for Resin Production</li>
+            </ul>
+
+            <!-- Applications -->
+            <h2 class="section-subheading">Applications</h2>
+            <ul class="chemical-list">
+                <li>Phenolic Resins Manufacturing</li>
+                <li>Plastics & Polymer Industry</li>
+                <li>Pharmaceuticals & Disinfectants</li>
+                <li>Adhesives & Laminates</li>
+                <li>Chemical Intermediates Production</li>
+            </ul>
+
+            <!-- Performance -->
+            <h2 class="section-subheading">Performace Highlights</h2>
+            <ul class="chemical-list">
+                <li>High Purity (Typically 99%+)</li>
+                <li>Strong Chemical Reactivity</li>
+                <li>Moderate Melting Point (~40–41°C)</li>
+                <li>High Boiling Point (~182°C)</li>
+                <li>Colorless to Light Pink Appearance</li>
+            </ul>
+
+            <!-- Back -->
+            <a href="{{ url_for('chemical_list') }}" class="product-btn">
+                ← Back to Industrial Chemicals
+            </a>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

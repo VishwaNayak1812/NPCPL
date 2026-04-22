@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}Industrial Solvents{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/solvent.css') }}">
+<section class="products-section">
+    <div class="products-container">
+        <div class="back-wrapper">
+            <a href="{{ url_for('product') }}" class="product-btn back-btn">
+                 ← Back to Products
+            </a>
+        </div>
+
+        <h1 class="section-title">Industrial <span class="gold"> Solvents</span></h1>
+        <p class="section-subtitle">
+            Base fluids, heat transfer, lubrication base, and industrial processing solutions.
+        </p>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <h3>NewMax Grade A</h3>
+                <p>Engineered chemical solution designed for enhanced performance and process efficiency.</p>
+                <a href="{{ url_for('newmax_a') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>NewMax Grade B</h3>
+                <p>Advanced formulation developed for reliability and consistent industrial results.</p>
+                <a href="{{ url_for('newmax_b') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niomax</h3>
+                <p>High-performance chemical solution built for strength, stability, and durability.</p>
+                <a href="{{ url_for('niomax') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niomax 90</h3>
+                <p>Advanced formulation developed for powerful solvency and consistent industrial performance.</p>
+                <a href="{{ url_for('niomax90') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niomol</h3>
+                <p>Specialized chemical blend crafted for superior emulsification and processing efficiency.</p>
+                <a href="{{ url_for('niomol') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niosol 100</h3>
+                <p>Precision-formulated solution designed for balanced performance in industrial applications.</p>
+                <a href="{{ url_for('niosol100') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niosol 150</h3>
+                <p>Enhanced chemical solution developed for improved efficiency and operational stability.</p>
+                <a href="{{ url_for('niosol150') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niosol 150 Plus</h3>
+                <p>Upgraded formulation delivering superior performance and extended process reliability.</p>
+                <a href="{{ url_for('niosol150plus') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niosol 200</h3>
+                <p>Premium-grade solution engineered for maximum efficiency and demanding industrial conditions.</p>
+                <a href="{{ url_for('niosol200') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3>Niosol 250</h3>
+                <p>Advanced formulation developed for superior solvency and high-temperature industrial performance.</p>
+                <a href="{{ url_for('niosol250') }}" class="product-btn">
+                    View Details →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

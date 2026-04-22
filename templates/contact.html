@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}NPCPL | Contact Us {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- PAGE HEADER -->
+        <h1 class="section-title">
+            Contact <span class="gold">Us</span>
+        </h1>
+        <p class="section-subtitle">
+            Reach out to Newage Petro Conchem Pvt. Ltd. for inquiries,
+            partnerships, or technical support.
+        </p>
+
+        <!-- CONTACT GRID -->
+        <div class="contact-grid">
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form-card">
+                <h2>Send Us a Message</h2>
+
+                <form method="POST" action="/contact">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- COMPANY DETAILS -->
+            <div class="contact-info-card">
+                <h2>Company Information</h2>
+
+                <div class="info-item">
+                    <strong>Company Name</strong>
+                    <p>Newage Petro & Conchem Pvt. Ltd.</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Address</strong>
+                    <p>
+                        Plot No. 99, B/H, GEB Sub-Station, Village Rania, Tal. Savli,<br>
+                        Vadodara, Gujarat, India – 391780
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Phone</strong>
+                    <p>+91 9825574000 <br>
+                      +91 9898096779<br>
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Email</strong>
+                    <p>newageoil.industries@gmail.com <br>
+                    info@newageoil.in<br>
+                    sudhir@newageoil.in</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Business Hours</strong>
+                    <p>Mon – Sat : 9:30 AM – 6:30 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MAP SECTION -->
+        <div class="map-section">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14744.711731045247!2d73.11752120434384!3d22.497506349335243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e3500682bbc8b%3A0xafa59b0954e30e24!2sNEWAGE%20PETRO%20%26%20CONCHEM%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1776157542109!5m2!1sen!2sin"
+                    width="100%" 
+                    height="380" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+       
+        <div class="popup" id="successPopup" style="display: none;">
+            <div class="popup-box">
+                  <h3>Message Sent 🎉</h3>
+                  <p>Thank you! We will contact you soon.</p>
+                  <button onclick="closePopup()">OK</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Show the popup automatically if Flask sends a 'status'
+    window.onload = function() {
+        const status = "{{ status }}";
+        // Check if status is specifically our success message
+        if (status && status.includes("Thank you")) {
+            document.getElementById('successPopup').style.display = 'flex';
+        }
+    };
+
+    function closePopup() {
+        document.getElementById('successPopup').style.display = 'none';
+        // Optional: Redirect to clear the status from URL/State
+        window.location.href = "{{ url_for('contact') }}";
+    }
+    </script>
+
+</section>
+{% endblock %}

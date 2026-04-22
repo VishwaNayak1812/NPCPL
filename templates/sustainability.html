@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}NPCPL | Sustainability {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sustainability.css') }}">
+
+<section class="sustainability-section">
+    <div class="sustainability-container">
+
+        <h1 class="section-title">
+            Sustainability & <span class="gold">Compliance</span>
+        </h1>
+        <p class="section-subtitle">
+            Committed to responsible operations, environmental stewardship,
+            and internationally recognized quality standards.
+        </p>
+
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/about_refinery.jpeg') }}">
+                <p>Modern Manufacturing Facility</p>
+                <small class="card-detail">Equipped with automated distillation units for high-purity chemical processing.</small>
+            </div>
+
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/lab.jpg') }}">
+                <p>Advanced Quality Control Laboratory</p>
+                <small class="card-detail">In-house testing facility ensuring 100% batch consistency and international grade standards.</small>
+            </div>
+
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/storage.jpg') }}">
+                <p>Safe Chemical Storage Infrastructure</p>
+                <small class="card-detail">6 Sky-blue central tanks with high-capacity containment to prevent environmental leaks.</small>
+            </div>
+
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/safety.jpg') }}">
+                <p>Strict Safety & Compliance Practices</p>
+                <small class="card-detail">Mandatory PPE protocols and real-time hazardous monitoring for workforce protection.</small>
+            </div>
+        </div>
+
+        <div class="info-divider"></div>
+        <div class="global-offices-section">
+            <h2 class="section-heading">Global <span class="gold">Offices</span></h2>
+            <div class="office-grid">
+                <div class="office-card">
+                    <h3>Manufacturing Unit </h3>
+                    <p>Plot No. 99, B/H, GEB Sub-Station, Village Rania, Tal. Savli, Vadodara – 391780, Gujarat, India.</p>
+                    <div class="contact-links">
+                        <p>👤 Ashok Vyas</p>
+                        <p>📞 +91 9825574000</p>
+                        <p>✉️ newageoil.industries@gmail.com</p>
+                        <a href="{{ url_for('office') }}" class="read-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="office-card">
+                    <h3>Corporate Office (Headquarters)</h3>
+                    <p>Plot No. 99, B/H, GEB Sub-Station, Village Rania, Tal. Savli, Vadodara, Gujarat, India – 391780.</p>
+                    <div class="contact-links">
+                        <p>👤 Chirag Bhojak</p>
+                        <p>📞 +91 9898096779</p>
+                        <p>✉️ chirag.bhojak@newagepetroconchem.in</p>
+                        <a href="{{ url_for('office') }}" class="read-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="office-card">
+                    <h3>International Presence (Dubai)</h3>
+                    <p> Burjuman Business Tower, Al Mankhool, Sheikh Khalifa Bin Zayed Road, Dubai, UAE.</p>
+                    <div class="contact-links">
+                        <p>👤 Chirag Bhojak</p>
+                        <p>📞 +971 564976779</p>
+                        <p>✉️ info@napccuae.com</p>
+                        <a href="{{ url_for('office') }}" class="read-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-details-grid">
+            <div class="detail-box">
+                <h3 class="gold">Investor Relations</h3>
+                <p>We maintain transparency and value for our stakeholders through consistent growth. Access our annual fiscal reports and corporate governance guidelines by reaching out to our finance department.</p>
+                <p><strong>Contact:</strong> investornpcpl@gmail.com</p>
+                <a href="{{ url_for('investor') }}" class="read-more">
+                    <span>Read More</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="detail-box">
+                <h3 class="gold">Privacy Policy</h3>
+                <p>Your data security is our priority. We collect information only for logistics and safety compliance. We use advanced encryption and never share your data with unauthorized third parties.</p>
+                <a href="{{ url_for('privacy') }}" class="read-more">
+                    <span>Read More</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+        </div>
+        
+        <div class="certificates-section">
+            <h2>Verified <span class="gold">Company </span>Certifications</h2>
+            <p class="certificates-subtitle">
+                Official documents confirming authenticity, quality control,
+                and safety compliance of Newage Petro Conchem Pvt. Ltd.
+            </p>
+
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <h3>ISO 9001 : 2015</h3>
+                    <p>International quality management certification ensuring consistent processes, reliability, and customer satisfaction.</p>
+                    <a href="{{ url_for('static', filename='certificates/iso_certificate.pdf') }}" class="btn-download" download>Download Certificate</a>
+                </div>
+
+                <div class="certificate-card">
+                    <h3>IEC Certification</h3>
+                    <p>Import Export Code (IEC) certification authorizing global trade operations and international business compliance.</p>
+                    <a href="{{ url_for('static', filename='certificates/iec_certificate.pdf') }}" class="btn-download" download>Download Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
